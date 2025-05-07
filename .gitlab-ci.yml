@@ -24,7 +24,7 @@ build_job:
       - $BUILD_DIR
   only:
     refs:
-      - doc
+      - main
   tags:
     - docker
 
@@ -34,6 +34,6 @@ deploy_prod_job_by_quickui_next:
     - rsync -av --delete $BUILD_DIR $DEPLOY_PROD_HOST::quickui-docs-next
   only:
     refs:
-      - doc
+      - main
   tags:
     - docker
