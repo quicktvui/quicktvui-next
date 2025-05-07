@@ -18,8 +18,6 @@ jobs:
 
       - name: Mirror to another repo
         run: |
-#          git config --global user.name "Your Name"
-#          git config --global user.email "you@example.com"
 
           git remote add mirror https://gitlab.extscreen.com/es/quicktvui-next.git
           git push --mirror mirror
