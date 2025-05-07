@@ -1,0 +1,886 @@
+/* QT Chalk Variables */
+@use 'sass:math';
+@use 'sass:map';
+
+@use '../mixins/function.scss' as *;
+
+//=========================================基础样式=====================================================
+// Special comment for theme configurator
+// type|skipAutoTranslation|Category|Order
+// skipAutoTranslation 1
+
+//--------------------------------组件基本类型--------------------------
+// types
+$types: primary, success, warning, danger, error, info;
+
+//--------------------------------组件基本颜色--------------------------
+// Color
+$colors: () !default;
+$colors: map.deep-merge(
+    (
+      'white': #ffffff,
+      'black': #000000,
+      'primary': (
+        'base': #409eff,
+      ),
+      'success': (
+        'base': #67c23a,
+      ),
+      'warning': (
+        'base': #e6a23c,
+      ),
+      'danger': (
+        'base': #f56c6c,
+      ),
+      'error': (
+        'base': #f56c6c,
+      ),
+      'info': (
+        'base': #909399,
+      ),
+    ),
+    $colors
+);
+
+$color-white: map.get($colors, 'white') !default;
+$color-black: map.get($colors, 'black') !default;
+$color-primary: map.get($colors, 'primary', 'base') !default;
+$color-success: map.get($colors, 'success', 'base') !default;
+$color-warning: map.get($colors, 'warning', 'base') !default;
+$color-danger: map.get($colors, 'danger', 'base') !default;
+$color-error: map.get($colors, 'error', 'base') !default;
+$color-info: map.get($colors, 'info', 'base') !default;
+
+//--------------------------------组件基本颜色-------- --qt-color-primary-light-i ------------------
+// https://sass-lang.com/documentation/values/maps#immutability
+// mix colors with white/black to generate light/dark level
+@mixin set-color-mix-level(
+  $type,
+  $number,
+  $mode: 'light',
+  $mix-color: $color-white
+) {
+  $colors: map.deep-merge(
+      (
+        $type: (
+          '#{$mode}-#{$number}':
+          mix(
+              $mix-color,
+              map.get($colors, $type, 'base'),
+              math.percentage(math.div($number, 10))
+          ),
+        ),
+      ),
+      $colors
+  ) !global;
+}
+
+// $colors.primary.light-i
+// --el-color-primary-light-i
+// 10% 53a8ff
+// 20% 66b1ff
+// 30% 79bbff
+// 40% 8cc5ff
+// 50% a0cfff
+// 60% b3d8ff
+// 70% c6e2ff
+// 80% d9ecff
+// 90% ecf5ff
+@each $type in $types {
+  @for $i from 1 through 9 {
+    @include set-color-mix-level($type, $i, 'light', $color-white);
+  }
+}
+
+// --el-color-primary-dark-2
+@each $type in $types {
+  @include set-color-mix-level($type, 2, 'dark', $color-black);
+}
+
+// -----------------------------------定义字体颜色-----------------------------------
+$text-color: () !default;
+$text-color: map.merge(
+    (
+      'normal': #ffffff,
+      'focus': #242424,
+      'select': #242424,
+    ),
+    $text-color
+);
+
+// -----------------------------------边框颜色-----------------------------------
+$border-color: () !default;
+$border-color: map.merge(
+    (
+      '': #dcdfe6,
+      'light': #e4e7ed,
+      'lighter': #ebeef5,
+      'extra-light': #f2f6fc,
+      'dark': #d4d7de,
+      'darker': #cdd0d6,
+    ),
+    $border-color
+);
+
+// -----------------------------------填充颜色-----------------------------------
+$fill-color: () !default;
+$fill-color: map.merge(
+    (
+      '': #f0f2f5,
+      'light': #f5f7fa,
+      'lighter': #fafafa,
+      'extra-light': #fafcff,
+      'dark': #ebedf0,
+      'darker': #e6e8eb,
+      'blank': #ffffff,
+    ),
+    $fill-color
+);
+
+// -----------------------------------背景颜色-----------------------------------
+// Background
+$bg-color: () !default;
+$bg-color: map.merge(
+    (
+      'normal': #4D4D4D,
+      'focus': #ffffff,
+      'select': #ffffff,
+    ),
+    $bg-color
+);
+
+// -----------------------------------焦点边框样式-----------------------------------
+// Focus Border
+$focus-border-width: 2px !default;
+$focus-border-radius: () !default;
+$focus-border-radius: map.merge(
+    (
+      'large': 16px,
+      'base': 8px,
+      'small': 8px,
+      'mini': 4px,
+    ),
+    $focus-border-radius
+);
+$focus-border-color: $color-white !default;
+$focus-black-border-enabled: false !default;
+
+// -----------------------------------边框样式-----------------------------------
+// Border
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-radius: () !default;
+$border-radius: map.merge(
+    (
+      'large': 16px,
+      'base': 16px,
+      'small': 8px,
+      'mini': 5px,
+      'round': 100px,
+      'circle': 100%,
+    ),
+    $border-radius
+);
+
+// ----------------------------------- Box 边框样式-----------------------------------
+// Box-shadow
+$box-shadow: () !default;
+$box-shadow: map.merge(
+    (
+      '': (
+        0px 12px 32px 4px rgba(0, 0, 0, 0.04),
+        0px 8px 20px rgba(0, 0, 0, 0.08),
+      ),
+      'light': (
+        0px 0px 12px rgba(0, 0, 0, 0.12),
+      ),
+      'lighter': (
+        0px 0px 6px rgba(0, 0, 0, 0.12),
+      ),
+      'dark': (
+        0px 16px 48px 16px rgba(0, 0, 0, 0.08),
+        0px 12px 32px rgba(0, 0, 0, 0.12),
+        0px 8px 16px -8px rgba(0, 0, 0, 0.16),
+      ),
+    ),
+    $box-shadow
+);
+
+// -----------------------------------字体样式-----------------------------------
+// Typography
+$font-family: () !default;
+$font-family: map.merge(
+    (
+      // default family
+      '':
+      "'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif"
+    ),
+    $font-family
+);
+
+$font-size: () !default;
+$font-size: map.merge(
+    (
+      'extra-large': 40px,
+      'large': 40px,
+      'medium': 36px,
+      'base': 24px,
+      'small': 24px,
+      'mini': 24px,
+    ),
+    $font-size
+);
+// -----------------------------------层级样式-----------------------------------
+// zIndex
+$z-index: () !default;
+$z-index: map.merge(
+    (
+      'normal': 1,
+      'top': 1000,
+      'popper': 2000,
+    ),
+    $z-index
+);
+
+// -----------------------------------不可用样式-----------------------------------
+// Disable default
+$disabled: () !default;
+$disabled: map.merge(
+    (
+      'bg-color': map.get($fill-color, 'light'),
+      'text-color': map.get($fill-color, 'placeholder'),
+      'border-color': map.get($fill-color, 'light'),
+    ),
+    $disabled
+);
+
+// -----------------------------------默认组件样式-----------------------------------
+
+$common-component-size: () !default;
+$common-component-size: map.merge(
+    (
+      'large': 52px,
+      'default': 44px,
+      'small': 36px,
+    ),
+    $common-component-size
+);
+
+// -----------------------------------浮层样式-----------------------------------
+// overlay
+$overlay-color: () !default;
+$overlay-color: map.merge(
+    (
+      '': rgba(0, 0, 0, 0.8),
+      'light': rgba(0, 0, 0, 0.7),
+      'lighter': rgba(0, 0, 0, 0.5),
+    ),
+    $overlay-color
+);
+
+// -----------------------------------遮罩样式-----------------------------------
+// mask
+$mask-color: () !default;
+$mask-color: map.merge(
+    (
+      '': rgba(255, 255, 255, 0.9),
+      'extra-light': rgba(255, 255, 255, 0.3),
+    ),
+    $mask-color
+);
+
+//=====================================================================================================
+//------------------------------组件的样式-------------------------------
+// Components
+// ---
+// Text
+// css3 var in packages/theme-chalk/src/text.scss
+$text: () !default;
+$text: map.merge(
+    (
+      'font-size': map.get($font-size, 'base'),
+      'color': map.get($text-color, 'normal'),
+    ),
+    $text
+);
+
+$text-font-size: () !default;
+$text-font-size: map.merge(
+    (
+      'large': map.get($font-size, 'large'),
+      'default': map.get($font-size, 'base'),
+      'small': map.get($font-size, 'small'),
+    ),
+    $text-font-size
+);
+
+// Loading
+// css3 var in packages/theme-chalk/src/loading.scss
+$loading: () !default;
+$loading: map.merge(
+    (
+      'spinner-size': 42px,
+      'fullscreen-spinner-size': 50px,
+    ),
+    $loading
+);
+
+
+// Empty
+// css3 var in packages/theme-chalk/src/empty.scss
+$empty: () !default;
+$empty: map.merge(
+    (
+      'padding': 40px 0,
+      'image-width': 160px,
+      'description-margin-top': 20px,
+      'bottom-margin-top': 20px,
+      'fill-color-0': $color-white,
+      'fill-color-1': #fcfcfd,
+      'fill-color-2': #f8f9fb,
+      'fill-color-3': #f7f8fc,
+      'fill-color-4': #eeeff3,
+      'fill-color-5': #edeef2,
+      'fill-color-6': #e9ebef,
+      'fill-color-7': #e5e7e9,
+      'fill-color-8': #e0e3e9,
+      'fill-color-9': #d5d7de,
+    ),
+    $empty
+);
+
+// Break-point
+$sm: 768px !default;
+$md: 992px !default;
+$lg: 1200px !default;
+$xl: 1920px !default;
+
+$breakpoints: (
+  'xs': '(max-width: #{$sm - 1})',
+  'sm': '(min-width: #{$sm})',
+  'md': '(min-width: #{$md})',
+  'lg': '(min-width: #{$lg})',
+  'xl': '(min-width: #{$xl})',
+) !default;
+
+$breakpoints-spec: (
+  'xs-only': '(max-width: #{$sm - 1})',
+  'sm-and-up': '(min-width: #{$sm})',
+  'sm-only': '(min-width: #{$sm}) and (max-width: #{$md - 1})',
+  'sm-and-down': '(max-width: #{$md - 1})',
+  'md-and-up': '(min-width: #{$md})',
+  'md-only': '(min-width: #{$md}) and (max-width: #{$lg - 1})',
+  'md-and-down': '(max-width: #{$lg - 1})',
+  'lg-and-up': '(min-width: #{$lg})',
+  'lg-only': '(min-width: #{$lg}) and (max-width: #{$xl - 1})',
+  'lg-and-down': '(max-width: #{$xl - 1})',
+  'xl-only': '(min-width: #{$xl})',
+) !default;
+
+//---------------------------------------------------------------
+
+// header
+$header: () !default;
+$header: map.merge(
+    (
+      'height': 150px,
+    ),
+    $header
+);
+
+// container
+$container: () !default;
+$container: map.merge(
+      (
+      ),
+    $container
+);
+
+// aside
+$aside: () !default;
+$aside: map.merge(
+    (
+      'width': 300px,
+    ),
+    $aside
+);
+
+// footer
+$footer: () !default;
+$footer: map.merge(
+    (
+      'height': 150px,
+    ),
+    $footer
+);
+
+// main
+$main: () !default;
+$main: map.merge(
+      (
+      ),
+    $main
+);
+
+//------------------------------button-----------------------------------------
+$button-width: () !default;
+$button-width: map.merge(
+    (
+      'large': 400px,
+      'default': 340px,
+      'small': 276px,
+      'mini': 260px,
+    ),
+    $button-width
+);
+
+$button-height: () !default;
+$button-height: map.merge(
+    (
+      'large': 104px,
+      'default': 88px,
+      'small': 72px,
+      'mini': 64px,
+    ),
+    $button-height
+);
+
+
+$button-font-size: () !default;
+$button-font-size: map.merge(
+    (
+      'large': map.get($font-size, 'large'),
+      'default': map.get($font-size, 'base'),
+      'small': map.get($font-size, 'small'),
+      'mini': map.get($font-size, 'mini'),
+    ),
+    $button-font-size
+);
+
+$button-icon-size: () !default;
+$button-icon-size: map.merge(
+    (
+      'large': 40px,
+      'default': 36px,
+      'small': 20px,
+      'mini': 20px,
+    ),
+    $button-icon-size
+);
+
+$button-icon-margining-horizontal: () !default;
+$button-icon-margining-horizontal: map.merge(
+    (
+      'large': 24px,
+      'default': 24px,
+      'small': 22px,
+      'mini': 22px,
+    ),
+    $button-icon-margining-horizontal
+);
+
+$button-border-radius: () !default;
+$button-border-radius: map.merge(
+    (
+      'large': map.get($border-radius, 'large'),
+      'default': map.get($border-radius, 'base'),
+      'small': map.get($border-radius, 'small'),
+      'mini': map.get($border-radius, 'mini')
+    ),
+    $button-border-radius
+);
+$button-border-width: $border-width !default;
+
+$button-padding-vertical: () !default;
+$button-padding-vertical: map.merge(
+    (
+      'large': 32px,
+      'default': 26px,
+      'small': 24px,
+      'mini': 20px,
+    ),
+    $button-padding-vertical
+);
+
+$button-padding-horizontal: () !default;
+$button-padding-horizontal: map.merge(
+    (
+      'large': 40px,
+      'default': 40px,
+      'small': 30px,
+      'mini': 30px,
+    ),
+    $button-padding-horizontal
+);
+
+$button-text-color: () !default;
+$button-text-color: map.merge(
+    (
+      'default': map.get($text-color, 'normal'),
+      'focus': map.get($text-color, 'focus'),
+      'select': map.get($text-color, 'select')
+    ),
+    $button-text-color
+);
+
+$button-bg-color: () !default;
+$button-bg-color: map.merge(
+    (
+      'default': map.get($bg-color, 'normal'),
+      'focus': map.get($bg-color, 'focus'),
+      'select': map.get($bg-color, 'select')
+    ),
+    $button-bg-color
+);
+
+
+//-----------------------------------------------------------------------
+$input-height: () !default;
+$input-height: map.merge($common-component-size, $input-height);
+
+
+//------------------------------AppIconSample-----------------------------------------
+$app-icon-sample-width: () !default;
+$app-icon-sample-width: map.merge(
+    (
+      'large': 400px,
+      'default': 340px,
+      'small': 276px,
+      'mini': 260px,
+    ),
+    $app-icon-sample-width
+);
+
+$app-icon-sample-height: () !default;
+$app-icon-sample-height: map.merge(
+    (
+      'large': 400px,
+      'default': 340px,
+      'small': 276px,
+      'mini': 260px,
+    ),
+    $app-icon-sample-height
+);
+
+$app-icon-sample-bg-color: () !default;
+$app-icon-sample-bg-color: map.merge(
+    (
+      'default': map.get($bg-color, 'normal'),
+      'focus': map.get($bg-color, 'focus'),
+      'select': map.get($bg-color, 'select')
+    ),
+    $app-icon-sample-bg-color
+);
+//----------------------------------------------------------------------------------
+
+
+//------------------------------QtInput-----------------------------------------
+$qt-input-width: () !default;
+$qt-input-width: map.merge(
+    (
+      'large': 450px,
+      'default': 450px,
+      'small': 450px,
+    ),
+    $qt-input-width
+);
+
+$qt-input-height: () !default;
+$qt-input-height: map.merge(
+    (
+      'large': 70px,
+      'default': 60px,
+      'small': 50px,
+    ),
+    $qt-input-height
+);
+//-----------------------------------------------------------------------------------
+
+//------------------------------QtCheckBox-----------------------------------------
+$checkbox-width: () !default;
+$checkbox-width: map.merge(
+    (
+      'large': 280px,
+      'default': 200px,
+      'small': 150px,
+    ),
+    $checkbox-width
+);
+
+$checkbox-height: () !default;
+$checkbox-height: map.merge(
+    (
+      'large': 60px,
+      'default': 50px,
+      'small': 50px,
+    ),
+    $checkbox-height
+);
+
+$checkbox-default-color: () !default;
+$checkbox-default-color: map.merge(
+    (
+      'normal': $color-info,
+    ),
+    $checkbox-default-color
+);
+
+$checkbox-focus-color: () !default;
+$checkbox-focus-color: map.merge(
+    (
+      'focus':$color-primary,
+      'select': $color-primary,
+    ),
+    $checkbox-focus-color
+);
+
+//-----------------------------------------------------------------------------------
+
+//------------------------------QtRadioButton-----------------------------------------
+$radiobutton-width: () !default;
+$radiobutton-width: map.merge(
+    (
+      'large': 280px,
+      'default': 200px,
+      'small': 150px,
+    ),
+    $radiobutton-width
+);
+
+$radiobutton-height: () !default;
+$radiobutton-height: map.merge(
+    (
+      'large': 60px,
+      'default': 50px,
+      'small': 50px,
+    ),
+    $radiobutton-height
+);
+
+$radiobutton-default-color: () !default;
+$radiobutton-default-color: map.merge(
+    (
+      'normal': $color-info,
+    ),
+    $radiobutton-default-color
+);
+
+$radiobutton-focus-color: () !default;
+$radiobutton-focus-color: map.merge(
+    (
+      'focus':$color-primary,
+      'select': $color-primary,
+    ),
+    $radiobutton-focus-color
+);
+
+//-----------------------------------------------------------------------------------
+
+
+//----------------------------------QtSwitch-----------------------------------------
+
+$switch-width: () !default;
+$switch-width: map.merge(
+    (
+      'large': 84px,
+      'default': 68px,
+      'small': 54px,
+    ),
+    $switch-width
+);
+
+$switch-height: () !default;
+$switch-height: map.merge(
+    (
+      'large': 48px,
+      'default': 40px,
+      'small': 34px,
+    ),
+    $switch-height
+);
+
+$switch-active-color: () !default;
+$switch-active-color: map.merge(
+    (
+      'default': $color-primary,
+    ),
+    $switch-active-color
+);
+
+//-----------------------------------------------------------------------------------
+
+//------------------------------QtRatingBar-----------------------------------------
+$ratingbar-width: () !default;
+$ratingbar-width: map.merge(
+    (
+      'large': 400px,
+      'default': 320px,
+      'small': 260px,
+    ),
+    $ratingbar-width
+);
+
+$ratingbar-height: () !default;
+$ratingbar-height: map.merge(
+    (
+      'large': 80px,
+      'default': 70px,
+      'small': 60px,
+    ),
+    $ratingbar-height
+);
+
+$ratingbar-default-color: () !default;
+$ratingbar-default-color: map.merge(
+    (
+      'normal': $color-info,
+    ),
+    $ratingbar-default-color
+);
+
+$ratingbar-focus-color: () !default;
+$ratingbar-focus-color: map.merge(
+    (
+      'focus': #ffffff,
+      'select': #ffffff,
+    ),
+    $ratingbar-focus-color
+);
+$ratingbar-bg-color: () !default;
+$ratingbar-bg-color: map.merge(
+    (
+      'default': #00000000,
+    ),
+    $ratingbar-bg-color
+);
+
+//------------------------------progress-bar-----------------------------------------
+$progress-bar-width: () !default;
+$progress-bar-width: map.merge(
+    (
+      'default': 435px
+    ),
+    $progress-bar-width
+);
+
+$progress-bar-height: () !default;
+$progress-bar-height: map.merge(
+    (
+      'default': 5px,
+    ),
+    $progress-bar-height
+);
+
+
+$progress-bar-progress-radius: () !default;
+$progress-bar-progress-radius: map.merge(
+    (
+      'default': map.get($border-radius, 'mini'),
+    ),
+    $progress-bar-progress-radius
+);
+
+$progress-bar-progress-color: () !default;
+$progress-bar-progress-color: map.merge(
+    (
+      'default': map.get($bg-color, 'focus'),
+    ),
+    $progress-bar-progress-color
+);
+
+$progress-bar-progress-default-color: () !default;
+$progress-bar-progress-default-color: map.merge(
+    (
+      'default': map.get($bg-color, 'normal'),
+    ),
+    $progress-bar-progress-default-color
+);
+
+//------------------------------seek-bar-----------------------------------------
+$seek-bar-width: () !default;
+$seek-bar-width: map.merge(
+    (
+      'default': 435px
+    ),
+    $seek-bar-width
+);
+
+$seek-bar-height: () !default;
+$seek-bar-height: map.merge(
+    (
+      'default': 5px,
+    ),
+    $seek-bar-height
+);
+
+
+$seek-bar-progress-radius: () !default;
+$seek-bar-progress-radius: map.merge(
+    (
+      'default': map.get($border-radius, 'mini'),
+    ),
+    $seek-bar-progress-radius
+);
+
+$seek-bar-progress-color: () !default;
+$seek-bar-progress-color: map.merge(
+    (
+      'default': map.get($bg-color, 'focus'),
+    ),
+    $seek-bar-progress-color
+);
+
+$seek-bar-progress-default-color: () !default;
+$seek-bar-progress-default-color: map.merge(
+    (
+      'default': map.get($bg-color, 'normal'),
+    ),
+    $seek-bar-progress-default-color
+);
+
+$seek-bar-thumb-width: () !default;
+$seek-bar-thumb-width: map.merge(
+    (
+      'default': 19px,
+    ),
+    $seek-bar-thumb-width
+);
+$seek-bar-thumb-height: () !default;
+$seek-bar-thumb-height: map.merge(
+    (
+      'default': 19px,
+    ),
+    $seek-bar-thumb-height
+);
+//------------------------------loading-----------------------------------------
+$loading-width: () !default;
+$loading-width: map.merge(
+    (
+      'large': 117px,
+      'default': 90px,
+      'small': 60px,
+      'mini': 50px,
+    ),
+    $loading-width
+);
+
+$loading-height: () !default;
+$loading-height: map.merge(
+    (
+      'large': 117px,
+      'default': 90px,
+      'small': 60px,
+      'mini': 50px,
+    ),
+    $loading-height
+);
+
+$loading-color: () !default;
+$loading-color: map.merge(
+    (
+      'default': map.get($bg-color, 'focus'),
+    ),
+    $loading-color
+);
+
+//---------------------------------------------------------------------

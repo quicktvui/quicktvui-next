@@ -1,0 +1,121 @@
+{
+  "zh-CN": {
+    "basic": {
+      "text": "Basic 基础模块",
+      "children": [
+        {
+          "link": "/es",
+          "text": "ES模块"
+        },
+        {
+          "link": "/event-bus",
+          "text": "事件总线模块"
+        },
+        {
+          "link": "/app-list",
+          "text": "应用列表模块"
+        },
+        {
+          "link": "/broadcast",
+          "text": "广播模块"
+        },
+        {
+          "link": "/content-provider",
+          "text": "内容提供者模块"
+        },
+        {
+          "link": "/develop",
+          "text": "开发信息模块"
+        },
+        {
+          "link": "/device",
+          "text": "设备信息模块"
+        },
+        {
+          "link": "/download",
+          "text": "文件下载模块"
+        },
+        {
+          "link": "/file",
+          "text": "文件模块"
+        },
+        {
+          "link": "/iac",
+          "text": "应用间通信模块"
+        },
+        {
+          "link": "/local-storage",
+          "text": "本地存储模块"
+        },
+        {
+          "link": "/location",
+          "text": "定位模块"
+        },
+        {
+          "link": "/network",
+          "text": "网络模块"
+        },
+        {
+          "link": "/permission",
+          "text": "权限模块"
+        },
+        {
+          "link": "/plugin",
+          "text": "插件模块"
+        },
+        {
+          "link": "/runtime",
+          "text": "运行环境模块"
+        },
+        {
+          "link": "/share-data",
+          "text": "共享数据模块"
+        },
+        {
+          "link": "/toast",
+          "text": "Toast模块"
+        },
+        {
+          "link": "/upload",
+          "text": "文件上传模块"
+        },
+        {
+          "link": "/usb",
+          "text": "USB模块"
+        },
+        {
+          "link": "/audio",
+          "text": "音量模块"
+        },
+        {
+          "link": "/log",
+          "text": "日志模块"
+        },
+        {
+          "link": "/display",
+          "text": "显示模块"
+        },
+        {
+          "link": "/power",
+          "text": "电源模块"
+        },
+        {
+          "link": "/action-bar",
+          "text": "工具栏模块"
+        },
+        {
+          "link": "/xlog",
+          "text": "日志模块"
+        },
+        {
+          "link": "/brightness",
+          "text": "屏幕亮度模块"
+        },
+        {
+          "link": "/service",
+          "text": "服务模块"
+        }
+      ]
+    }
+  }
+}

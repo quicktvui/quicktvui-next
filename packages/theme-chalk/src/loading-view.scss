@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'mixins/button' as *;
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(loading) {
+
+  color: map.get($loading-color, 'default');
+
+  @each $size in (large, default, small, mini) {
+    @include m($size) {
+      width: map.get($loading-width, $size);
+      height: map.get($loading-height, $size);
+    }
+  }
+}

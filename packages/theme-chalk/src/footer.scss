@@ -1,0 +1,13 @@
+@use 'sass:map';
+
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+@include b(footer) {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: map.get($footer, 'height');
+}

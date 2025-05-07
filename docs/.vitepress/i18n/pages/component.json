@@ -1,0 +1,543 @@
+{
+  "zh-CN": {
+    "basic": {
+      "text": "Basic 基础组件",
+      "children": [
+        {
+          "link": "/div",
+          "text": "div"
+        },
+        {
+          "link": "/img",
+          "text": "img"
+        },
+        {
+          "link": "/ul",
+          "text": "ul"
+        },
+        {
+          "link": "/li",
+          "text": "li"
+        },
+        {
+          "link": "/p",
+          "text": "p"
+        },
+        {
+          "link": "/swiper",
+          "text": "Swiper"
+        },
+        {
+          "link": "/swiper-slide",
+          "text": "Swiper Slide"
+        }
+      ]
+    },
+    "quick": {
+      "text": "QuickTVUI 快应用组件",
+      "children": [
+        {
+          "link": "/view",
+          "text": "View"
+        },
+        {
+          "link": "/text",
+          "text": "Text"
+        },
+        {
+          "link": "/image",
+          "text": "Image"
+        },
+        {
+          "link": "/loading",
+          "text": "Loading"
+        },
+        {
+          "link": "/qr-code",
+          "text": "QR Code"
+        },
+        {
+          "link": "/column",
+          "text": "Column"
+        },
+        {
+          "link": "/row",
+          "text": "Row"
+        },
+        {
+          "link": "/progress-bar",
+          "text": "Progress Bar"
+        },
+        {
+          "link": "/seek-bar",
+          "text": "Seek Bar"
+        },
+        {
+          "link": "/button",
+          "text": "Button"
+        },
+        {
+          "link": "/classified-list-view",
+          "text": "Classified List View"
+        },
+        {
+          "link": "/collapse",
+          "text": "Collapse"
+        },
+        {
+          "link": "/plugin-view",
+          "text": "Plugin View"
+        },
+        {
+          "link": "/scroll-view",
+          "text": "Scroll View"
+        },
+        {
+          "link": "/media-series",
+          "text": "Media Series"
+        },
+        {
+          "link": "/transition-img",
+          "text": "Transition Img"
+        },
+        {
+          "link": "/ripple-view",
+          "text": "Ripple View"
+        },
+        {
+          "link": "/play-mark-view",
+          "text": "Play Mark View"
+        },
+        {
+          "link": "/replace-child",
+          "text": "Replace Child"
+        },
+        {
+          "link": "/card",
+          "text": "Card"
+        },
+        {
+          "link": "/card-container",
+          "text": "Card Container"
+        },
+        {
+          "link": "/dialog",
+          "text": "Dialog"
+        },
+        {
+          "link": "/app-icon",
+          "text": "App Icon"
+        },
+        {
+          "link": "/indicator-list-view",
+          "text": "IndicatorListView"
+        },
+        {
+          "link": "/header",
+          "text": "Header"
+        },
+        {
+          "link": "/footer",
+          "text": "Footer"
+        },
+        {
+          "link": "/aside",
+          "text": "Aside"
+        },
+        {
+          "link": "/main",
+          "text": "Main"
+        },
+        {
+          "link": "/container",
+          "text": "Container"
+        },
+        {
+          "link": "/input",
+          "text": "Input"
+        },
+        {
+          "link": "/switch",
+          "text": "Switch"
+        },
+        {
+          "link": "/rating-bar",
+          "text": "RatingBar"
+        },
+        {
+          "link": "/radio-group",
+          "text": "RadioGroup"
+        },
+        {
+          "link": "/checkbox-group",
+          "text": "CheckBoxGroup"
+        }
+      ]
+    },
+    "virtual": {
+      "text": "Virtual DOM组件",
+      "children": [
+        {
+          "link": "/virtual",
+          "text": "引言"
+        },
+        {
+          "link": "/list-view",
+          "text": "List View"
+        },
+        {
+          "link": "/grid-view",
+          "text": "Grid View"
+        },
+        {
+          "link": "/waterfall",
+          "text": "Waterfall"
+        },
+        {
+          "link": "/tabs",
+          "text": "Tabs"
+        },
+        {
+          "link": "/vue-section",
+          "text": "Vue Section"
+        },
+        {
+          "link": "/poster",
+          "text": "Poster"
+        },
+        {
+          "link": "/nav-bar",
+          "text": "Nav Bar"
+        }
+      ]
+    },
+    "animation": {
+      "text": "Animation 动画组件",
+      "children": [
+        {
+          "link": "/animation/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/animation/basic",
+          "text": "基础用法"
+        },
+        {
+          "link": "/animation/alpha",
+          "text": "透明度动画"
+        },
+        {
+          "link": "/animation/scale",
+          "text": "变形动画"
+        },
+        {
+          "link": "/animation/translation",
+          "text": "平移动画"
+        },
+        {
+          "link": "/animation/rotation",
+          "text": "旋转动画"
+        },
+        {
+          "link": "/animation/rotation-xy",
+          "text": "旋转XY动画"
+        },
+        {
+          "link": "/animation/animators",
+          "text": "动画合集"
+        },
+        {
+          "link": "/animation/listener",
+          "text": "动画事件监听"
+        },
+        {
+          "link": "/animation/interpolator",
+          "text": "插值器"
+        },
+        {
+          "link": "/animation/repeat",
+          "text": "重复模式"
+        }
+      ]
+    },
+    "lottie": {
+      "text": "Lottie 动画组件",
+      "children": [
+        {
+          "link": "/lottie/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/lottie/basic",
+          "text": "基础用法"
+        },
+        {
+          "link": "/lottie/event",
+          "text": "事件"
+        },
+        {
+          "link": "/lottie/network",
+          "text": "网络资源"
+        },
+        {
+          "link": "/lottie/assets",
+          "text": "本地资源"
+        }
+      ]
+    },
+    "webview": {
+      "text": "WebView 网络视图",
+      "children": [
+        {
+          "link": "/x5web-view",
+          "text": "X5 Web View"
+        },
+        {
+          "link": "/web-view",
+          "text": "Web View"
+        },
+        {
+          "link": "/js2vue",
+          "text": "Html5调用Vue"
+        },
+        {
+          "link": "/vue2js",
+          "text": "Vue调用Html5"
+        }
+      ]
+    },
+    "media": {
+      "text": "MediaPlayer 媒体播放组件",
+      "children": [
+        {
+          "link": "/player/media-player",
+          "text": "MediaPlayer"
+        },
+        {
+          "link": "/player/player",
+          "text": "IPlayer 播放接口"
+        },
+        {
+          "link": "/player/page-player",
+          "text": "播放控制"
+        },
+        {
+          "link": "/player/interceptor",
+          "text": "播放数据拦截器"
+        },
+        {
+          "link": "/player/global-event",
+          "text": "全局播放事件监听"
+        }
+      ]
+    },
+    "video-player": {
+      "text": "VideoPlayer 视频播放器",
+      "children": [
+        {
+          "link": "/video-player/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/video-player/installation",
+          "text": "集成"
+        },
+        {
+          "link": "/video-player/basic",
+          "text": "基础用法"
+        },
+        {
+          "link": "/video-player/type",
+          "text": "播放器类型"
+        },
+        {
+          "link": "/video-player/control",
+          "text": "播放控制"
+        },
+        {
+          "link": "/video-player/progress",
+          "text": "播放进度"
+        },
+        {
+          "link": "/video-player/event",
+          "text": "监听播放事件"
+        },
+        {
+          "link": "/video-player/global-event",
+          "text": "全局监听播放事件"
+        },
+        {
+          "link": "/video-player/mode",
+          "text": "播放模式"
+        },
+        {
+          "link": "/video-player/rate",
+          "text": "播放倍速"
+        },
+        {
+          "link": "/video-player/aspect-ratio",
+          "text": "画面比例"
+        },
+        {
+          "link": "/video-player/render",
+          "text": "渲染方式"
+        },
+        {
+          "link": "/video-player/decode",
+          "text": "解码方式"
+        },
+        {
+          "link": "/video-player/definition",
+          "text": "清晰度"
+        }
+      ]
+    },
+    "player-manager": {
+      "text": "PlayerManager 播放管理器",
+      "children": [
+        {
+          "link": "/player-manager/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/player-manager/installation",
+          "text": "集成"
+        },
+        {
+          "link": "/player-manager/data-structure",
+          "text": "数据结构"
+        },
+        {
+          "link": "/player-manager/player-type",
+          "text": "播放器类型"
+        },
+        {
+          "link": "/player-manager/basic",
+          "text": "基础用法"
+        },
+        {
+          "link": "/player-manager/control",
+          "text": "播放控制"
+        },
+        {
+          "link": "/player-manager/custom-control",
+          "text": "自定义播放控制"
+        },
+        {
+          "link": "/player-manager/media-item-list",
+          "text": "操作播放列表"
+        },
+        {
+          "link": "/player-manager/media-item-list-interceptor",
+          "text": "MediaItemList拦截器"
+        },
+        {
+          "link": "/player-manager/media-item-interceptor",
+          "text": "MediaItem拦截器"
+        },
+        {
+          "link": "/player-manager/media-source-list-interceptor",
+          "text": "MediaSourceList拦截器"
+        },
+        {
+          "link": "/player-manager/media-source-interceptor",
+          "text": "MediaSource拦截器"
+        },
+        {
+          "link": "/player-manager/window",
+          "text": "播放窗口"
+        },
+        {
+          "link": "/player-manager/position",
+          "text": "播放位置"
+        },
+        {
+          "link": "/player-manager/size",
+          "text": "播放尺寸"
+        },
+        {
+          "link": "/player-manager/event",
+          "text": "监听播放事件"
+        },
+        {
+          "link": "/player-manager/global-event",
+          "text": "全局监听播放事件"
+        },
+        {
+          "link": "/player-manager/mode",
+          "text": "播放模式"
+        },
+        {
+          "link": "/player-manager/aspect-ratio",
+          "text": "画面比例"
+        },
+        {
+          "link": "/player-manager/definition",
+          "text": "清晰度"
+        },
+        {
+          "link": "/player-manager/decode",
+          "text": "解码方式"
+        },
+        {
+          "link": "/player-manager/rate",
+          "text": "播放倍速"
+        },
+        {
+          "link": "/player-manager/player",
+          "text": "自定义播放器"
+        },
+        {
+          "link": "/player-manager/player-view",
+          "text": "自定义播放视图"
+        },
+        {
+          "link": "/player-manager/multiple-player",
+          "text": "多类型播放"
+        }
+      ]
+    },
+    "audio-player": {
+      "text": "AudioPlayer 音频播放器",
+      "children": [
+        {
+          "link": "/audio-player/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/audio-player/installation",
+          "text": "集成"
+        },
+        {
+          "link": "/audio-player/basic",
+          "text": "基础用法"
+        },
+        {
+          "link": "/audio-player/player-manager",
+          "text": "播放管理器"
+        }
+      ]
+    },
+    "audio-player-service": {
+      "text": "AudioPlayer 音频播放服务",
+      "children": [
+        {
+          "link": "/audio-service-player/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/audio-service-player/installation",
+          "text": "集成"
+        },
+        {
+          "link": "/audio-service-player/basic",
+          "text": "基础用法"
+        },
+        {
+          "link": "/audio-service-player/player-manager",
+          "text": "播放管理器"
+        }
+      ]
+    }
+  }
+}

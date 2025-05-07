@@ -1,0 +1,102 @@
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(poster) {
+  position: absolute;
+  background-color: transparent;
+  overflow: hidden;
+
+  @include e(img) {
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    position: absolute;
+    focus-border-color: white;
+    focus-border-style: solid;
+  }
+
+  @include e(score) {
+    z-index: 2;
+    position: absolute;
+    color: #FC5E1B;
+    background-color: transparent;
+  }
+
+  @include e(title) {
+    padding-left: 16px;
+    padding-top: 15px;
+    background-color: transparent;
+  }
+
+  @include e(ripple) {
+    width: 100px;
+    height: 100px;
+    right: 0;
+    bottom: 0;
+    margin-right: -12px;
+    z-index: 1000;
+    background-color: transparent;
+    position: absolute;
+
+    @include m(view) {
+      width: 100px;
+      height: 100px;
+      z-index: 1000;
+      background-color: transparent;
+      position: absolute;
+    }
+
+    @include m(img) {
+      width: 60px;
+      height: 60px;
+      background-color: transparent;
+      position: absolute;
+      z-index: 1001;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+
+
+  @include e(corner) {
+    position: absolute;
+    left: 0.01px;
+    top: 0.01px;
+    z-index: 1000;
+    background-color: transparent;
+
+    @include when(left) {
+
+    }
+
+    @include when(right) {
+      flex-direction: row-reverse;
+    }
+
+    @include m(img) {
+      position: absolute;
+      top: 0.01px;
+      z-index: 2;
+
+      @include when(left) {
+        left: 0.01px;
+      }
+
+      @include when(right) {
+        right: 0.01px;
+      }
+    }
+  }
+
+  @include e(focus) {
+    position: absolute;
+    z-index: 999;
+    background-color: transparent;
+
+    @include m(background) {
+      background-color: transparent;
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+  }
+}

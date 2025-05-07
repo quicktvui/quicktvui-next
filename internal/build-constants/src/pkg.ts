@@ -1,0 +1,5 @@
+export const PKG_PREFIX = '@quicktvui'
+export const PKG_NAME = 'quicktvui'
+export const PKG_CAMELCASE_NAME = 'QuickTVUI'
+export const PKG_CAMELCASE_LOCAL_NAME = 'QuickTVUILocale'
+export const PKG_BRAND_NAME = 'Quick TV UI'

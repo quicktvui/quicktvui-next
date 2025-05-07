@@ -1,0 +1,9 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(longimage) {
+  active-color: map.get($switch-active-color,'default');
+}

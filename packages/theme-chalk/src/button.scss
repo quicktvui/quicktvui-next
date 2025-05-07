@@ -1,0 +1,94 @@
+@use 'sass:map';
+
+@use 'mixins/button' as *;
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(button) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  focus-border-radius: map.get($focus-border-radius, 'base');
+  focus-border-width: $focus-border-width;
+  focus-border-color: $focus-border-color;
+  enable-black-border: $focus-black-border-enabled;
+
+  background-color: map.get($button-bg-color, 'default');
+  focus-background-color: map.get($button-bg-color, 'focus');
+
+  @include when(round) {
+    border-radius: map.get($border-radius, 'round');
+  }
+
+  //gradient
+  @include e(gradient) {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  //text
+  @include e(text) {
+    text-align: center;
+    text-align-vertical: center;
+    focus-color: map.get($button-text-color, 'focus');
+    color: map.get($button-text-color, 'default');
+  }
+
+  //icon-root
+  @include e(icon-root) {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  //icon
+  @include e(icon) {
+    position: absolute;
+  }
+
+  @each $size in (large, default, small, mini) {
+    //root
+    @include m($size) {
+      @include button-size(
+          map.get($button-width, $size),
+          map.get($button-height, $size),
+          map.get($button-padding-vertical, $size) - $button-border-width,
+          map.get($button-padding-horizontal, $size) - $button-border-width,
+          map.get($button-border-radius, $size)
+      );
+    }
+
+    //text
+    @include e(text) {
+      @include m($size) {
+        font-size: map.get($button-font-size, $size)
+      }
+    }
+
+    //icon-root
+    @include e(icon-root) {
+      @include m($size) {
+        width: map.get($button-icon-size, $size);
+        height: map.get($button-icon-size, $size);
+        margin-right: map.get($button-icon-margining-horizontal, $size);
+      }
+    }
+
+    //icon
+    @include e(icon) {
+      @include m($size) {
+        width: map.get($button-icon-size, $size);
+        height: map.get($button-icon-size, $size);
+      }
+    }
+  }
+}
+
+

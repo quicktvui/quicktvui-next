@@ -1,0 +1,86 @@
+{
+  "zh-CN": {
+    "api": {
+      "text": "API 工具",
+      "children": [
+        {
+          "link": "/api/overview",
+          "text": "qt 全局变量"
+        }
+      ]
+    },
+    "cli": {
+      "text": "CLI",
+      "children": [
+        {
+          "text": "简介",
+          "link": "/cli/introduction"
+        },
+        {
+          "text": "安装",
+          "link": "/cli/installation"
+        },
+        {
+          "text": "环境信息",
+          "link": "/cli/info"
+        },
+        {
+          "text": "开发环境",
+          "link": "/cli/setup"
+        },
+        {
+          "text": "配置",
+          "link": "/cli/config"
+        },
+        {
+          "text": "创建项目",
+          "link": "/cli/create"
+        },
+        {
+          "text": "调试",
+          "link": "/cli/debug"
+        },
+        {
+          "text": "清理项目",
+          "link": "/cli/clean"
+        },
+        {
+          "text": "编译项目",
+          "link": "/cli/build"
+        },
+        {
+          "text": "打包项目",
+          "link": "/cli/pack"
+        },
+        {
+          "text": "发布项目",
+          "link": "/cli/publish"
+        },
+        {
+          "text": "预览",
+          "link": "/cli/preview"
+        },
+        {
+          "text": "测试",
+          "link": "/cli/test"
+        },
+        {
+          "text": "打开应用",
+          "link": "/cli/start"
+        },
+        {
+          "text": "迁移",
+          "link": "/cli/migrate"
+        },
+        {
+          "text": "ADB",
+          "link": "/cli/adb"
+        },
+        {
+          "text": "日志",
+          "link": "/cli/logcat"
+        }
+      ]
+    }
+  }
+}

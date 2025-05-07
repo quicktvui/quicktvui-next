@@ -1,0 +1,63 @@
+<template>
+  <div class="es-sdk-root-css">
+    <qt-waterfall ref="waterfall" class="qt-waterfall-css" />
+  </div>
+</template>
+
+<script lang="ts">
+import { ref } from 'vue'
+import { defineComponent } from '@vue/runtime-core'
+import { QTWaterfallSectionType } from '@quicktvui/quicktvui3'
+import { buildPosterDecorationItemList } from '../__mocks__/poster'
+import type {
+  QTIWaterfall,
+  QTWaterfall,
+  QTWaterfallSection,
+} from '@quicktvui/quicktvui3'
+
+export default defineComponent({
+  name: 'ItemDecoration',
+  setup() {
+    const waterfall = ref<QTIWaterfall>()
+
+    function onESCreate() {
+      const waterfallData: QTWaterfall = {
+        width: 1920,
+        height: 1080,
+      }
+      waterfall.value?.init(waterfallData)
+      const sectionList: Array<QTWaterfallSection> = []
+      for (let i = 0; i < 1; i++) {
+        const section: QTWaterfallSection = {
+          _id: `${i}`,
+          type: QTWaterfallSectionType.QT_WATERFALL_SECTION_TYPE_FLEX,
+          itemList: buildPosterDecorationItemList(),
+          titleStyle: {
+            width: 0,
+            height: 0,
+            fontSize: 50,
+          },
+          style: {
+            width: 1920,
+            height: 400 + 60 + 36,
+          },
+        }
+        sectionList.push(section)
+      }
+      waterfall.value?.setSectionList(sectionList)
+    }
+
+    return {
+      waterfall,
+      onESCreate,
+    }
+  },
+})
+</script>
+
+<style>
+.qt-waterfall-css {
+  width: 1920px;
+  height: 1080px;
+}
+</style>

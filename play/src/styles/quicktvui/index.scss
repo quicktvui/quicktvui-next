@@ -1,0 +1,25 @@
+@forward 'quicktvui/theme-chalk/src/common/var.scss' with (
+    //----------------------------
+    //覆写全部组件背景颜色
+    $bg-color: (
+      'normal': gold,
+      'focus': red,
+      'select': #ffffff,
+    ),
+    //----------------------------
+    //覆写全局圆角
+    //$border-radius: (
+    //  'round': 10px ,
+    //),
+
+    //----------------------------
+    //覆写全部按钮背景颜色
+    //$button-bg-color: (
+    //  'default': red ,
+    //  'focus': green,
+    //  'select': #ffffff,
+    //),
+);
+
+//打开注释引入全部样式
+@use "quicktvui/theme-chalk/src/index.scss" as *;

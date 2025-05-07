@@ -1,0 +1,90 @@
+<template>
+  <div class="es-sdk-root-css">
+    <div class="es-sdk-content-row-css">
+      <s-text-button
+        text="删除第一个板块Item"
+        @onButtonClicked="onDeleteButtonClicked"
+      />
+      <s-text-button
+        text="删除第二个板块Item"
+        @onButtonClicked="onDeleteButton2Clicked"
+      />
+    </div>
+    <qt-waterfall ref="waterfall" class="qt-waterfall-op-css">
+      <template #item>
+        <app-list-item :type="1" />
+      </template>
+    </qt-waterfall>
+  </div>
+</template>
+
+<script lang="ts">
+import { ref } from 'vue'
+import { defineComponent } from '@vue/runtime-core'
+import {
+  generatorAppChildrenWaterfallItemList,
+  generatorAppQuestionWaterfallItemList,
+  generatorWaterfallSection,
+} from '../__mocks__/app'
+import appListItem from './item/app-list-item'
+import type {
+  QTIWaterfall,
+  QTWaterfall,
+  QTWaterfallSection,
+} from '@quicktvui/quicktvui3'
+
+const TAG = 'WaterfallTAG'
+
+export default defineComponent({
+  name: '删除Item',
+  components: {
+    'app-list-item': appListItem,
+  },
+  setup() {
+    const waterfall = ref<QTIWaterfall>()
+
+    function onDeleteButtonClicked() {
+      waterfall.value?.deleteItem(0, 0, 1)
+    }
+
+    function onDeleteButton2Clicked() {
+      waterfall.value?.deleteItem(1, 0, 2)
+    }
+
+    function onESCreate() {
+      const waterfallData: QTWaterfall = {
+        width: 1920,
+        height: 1080,
+      }
+      waterfall.value?.init(waterfallData)
+      const sectionList: Array<QTWaterfallSection> = [
+        generatorWaterfallSection(
+          '0',
+          `应用：${Date.now()}`,
+          generatorAppQuestionWaterfallItemList('1', 7)
+        ),
+        generatorWaterfallSection(
+          '2',
+          `应用：${Date.now()}`,
+          generatorAppChildrenWaterfallItemList('3', 7)
+        ),
+      ]
+      waterfall.value?.addSectionList(sectionList)
+    }
+
+    return {
+      waterfall,
+      onESCreate,
+      onDeleteButton2Clicked,
+      onDeleteButtonClicked,
+    }
+  },
+})
+</script>
+
+<style>
+.qt-waterfall-op-css {
+  width: 1920px;
+  height: 800px;
+}
+</style>

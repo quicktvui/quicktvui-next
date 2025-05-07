@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(qt-input) {
+
+  default-color: map.get($button-bg-color,'default');
+  focus-color: map.get($button-bg-color,'focus');;
+  background-color: map.get($button-bg-color, 'default');
+
+  //
+  @each $size in (large, default, small) {
+    //root
+    @include m($size) {
+      width: map.get($qt-input-width, $size);
+      height: map.get($qt-input-height, $size);
+    }
+  }
+}

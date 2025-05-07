@@ -1,0 +1,10 @@
+@use 'sass:math';
+
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/_col' as *;
+
+@include b(column) {
+  display: flex;
+  flex-direction: column;
+}

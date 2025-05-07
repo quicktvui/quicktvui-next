@@ -1,0 +1,325 @@
+{
+  "layout": {
+    "text": "Layout 布局",
+    "children": [
+      {
+        "link": "/layout/align-items",
+        "text": "alignItems"
+      },
+      {
+        "link": "/layout/align-self",
+        "text": "alignSelf"
+      },
+      {
+        "link": "/layout/background-position-x",
+        "text": "backgroundPositionX"
+      },
+      {
+        "link": "/layout/background-position-y",
+        "text": "backgroundPositionY"
+      },
+      {
+        "link": "/layout/background-size",
+        "text": "backgroundSize"
+      },
+      {
+        "link": "/layout/collapsable",
+        "text": "collapsable"
+      },
+      {
+        "link": "/layout/display",
+        "text": "display"
+      },
+      {
+        "link": "/layout/flex",
+        "text": "flex"
+      },
+      {
+        "link": "/layout/flex-basis",
+        "text": "flexBasis"
+      },
+      {
+        "link": "/layout/flex-direction",
+        "text": "flexDirection"
+      },
+      {
+        "link": "/layout/flex-grow",
+        "text": "flexGrow"
+      },
+      {
+        "link": "/layout/flex-shrink",
+        "text": "flexShrink"
+      },
+      {
+        "link": "/layout/flex-wrap",
+        "text": "flexWrap"
+      },
+      {
+        "link": "/layout/height",
+        "text": "height"
+      },
+      {
+        "link": "/layout/justify-content",
+        "text": "justifyContent"
+      },
+      {
+        "link": "/layout/left",
+        "text": "left"
+      },
+      {
+        "link": "/layout/line-height",
+        "text": "lineHeight"
+      },
+      {
+        "link": "/layout/margin",
+        "text": "margin"
+      },
+      {
+        "link": "/layout/margin-bottom",
+        "text": "marginBottom"
+      },
+      {
+        "link": "/layout/margin-horizontal",
+        "text": "marginHorizontal"
+      },
+      {
+        "link": "/layout/margin-left",
+        "text": "marginLeft"
+      },
+      {
+        "link": "/layout/margin-right",
+        "text": "marginRight"
+      },
+      {
+        "link": "/layout/margin-top",
+        "text": "marginTop"
+      },
+      {
+        "link": "/layout/margin-vertical",
+        "text": "marginVertical"
+      },
+      {
+        "link": "/layout/max-height",
+        "text": "maxHeight"
+      },
+      {
+        "link": "/layout/max-width",
+        "text": "maxWidth"
+      },
+      {
+        "link": "/layout/min-height",
+        "text": "minHeight"
+      },
+      {
+        "link": "/layout/min-width",
+        "text": "minWidth"
+      },
+      {
+        "link": "/layout/overflow",
+        "text": "overflow"
+      },
+      {
+        "link": "/layout/padding",
+        "text": "padding"
+      },
+      {
+        "link": "/layout/padding-bottom",
+        "text": "paddingBottom"
+      },
+      {
+        "link": "/layout/padding-horizontal",
+        "text": "paddingHorizontal"
+      },
+      {
+        "link": "/layout/padding-left",
+        "text": "paddingLeft"
+      },
+      {
+        "link": "/layout/padding-right",
+        "text": "paddingRight"
+      },
+      {
+        "link": "/layout/padding-top",
+        "text": "paddingTop"
+      },
+      {
+        "link": "/layout/padding-vertical",
+        "text": "paddingVertical"
+      },
+      {
+        "link": "/layout/position",
+        "text": "position"
+      },
+      {
+        "link": "/layout/right",
+        "text": "right"
+      },
+      {
+        "link": "/layout/text-align",
+        "text": "textAlign"
+      },
+      {
+        "link": "/layout/top",
+        "text": "top"
+      },
+      {
+        "link": "/layout/width",
+        "text": "width"
+      },
+      {
+        "link": "/layout/z-index",
+        "text": "zIndex"
+      }
+    ]
+  },
+  "appearance": {
+    "text": "Appearance 外观",
+    "children": [
+      {
+        "link": "/style/border-color",
+        "text": "borderColor"
+      },
+      {
+        "link": "/style/border-top-color",
+        "text": "borderTopColor"
+      },
+      {
+        "link": "/style/border-bottom-color",
+        "text": "borderBottomColor"
+      },
+      {
+        "link": "/style/border-left-color",
+        "text": "borderLeftColor"
+      },
+      {
+        "link": "/style/border-right-color",
+        "text": "borderRightColor"
+      },
+      {
+        "link": "/style/border-radius",
+        "text": "borderRadius"
+      },
+      {
+        "link": "/style/border-top-left-radius",
+        "text": "borderTopLeftRadius"
+      },
+      {
+        "link": "/style/border-top-right-radius",
+        "text": "borderTopRightRadius"
+      },
+      {
+        "link": "/style/border-bottom-left-radius",
+        "text": "borderBottomLeftRadius"
+      },
+      {
+        "link": "/style/border-bottom-right-radius",
+        "text": "borderBottomRightRadius"
+      },
+      {
+        "link": "/style/border-width",
+        "text": "borderWidth"
+      },
+      {
+        "link": "/style/border-top-width",
+        "text": "borderTopWidth"
+      },
+      {
+        "link": "/style/border-bottom-width",
+        "text": "borderBottomWidth"
+      },
+      {
+        "link": "/style/border-left-width",
+        "text": "borderLeftWidth"
+      },
+      {
+        "link": "/style/border-right-width",
+        "text": "borderRightWidth"
+      },
+      {
+        "link": "/style/background-color",
+        "text": "backgroundColor"
+      },
+      {
+        "link": "/style/border-style",
+        "text": "borderStyle"
+      },
+      {
+        "link": "/style/box-shadow",
+        "text": "boxShadow"
+      },
+      {
+        "link": "/style/color",
+        "text": "color"
+      },
+      {
+        "link": "/style/font-family",
+        "text": "fontFamily"
+      },
+      {
+        "link": "/style/font-size",
+        "text": "fontSize"
+      },
+      {
+        "link": "/style/font-style",
+        "text": "fontStyle"
+      },
+      {
+        "link": "/style/font-weight",
+        "text": "fontWeight"
+      },
+      {
+        "link": "/style/letter-spacing",
+        "text": "letterSpacing"
+      },
+      {
+        "link": "/style/opacity",
+        "text": "opacity"
+      },
+      {
+        "link": "/style/text-decoration",
+        "text": "textDecoration"
+      },
+      {
+        "link": "/style/text-decoration-color",
+        "text": "textDecorationColor"
+      },
+      {
+        "link": "/style/text-decoration-line",
+        "text": "textDecorationLine"
+      },
+      {
+        "link": "/style/tint-color",
+        "text": "tintColor"
+      },
+      {
+        "link": "/style/visibility",
+        "text": "visibility"
+      }
+    ]
+  },
+  "color": {
+    "text": "Color 颜色",
+    "children": [
+      {
+        "link": "/color/rgb",
+        "text": "RGB"
+      },
+      {
+        "link": "/color/hsl",
+        "text": "HSL"
+      },
+      {
+        "link": "/color/transparent",
+        "text": "透明"
+      },
+      {
+        "link": "/color/name",
+        "text": "颜色名称"
+      },
+      {
+        "link": "/color/gradient",
+        "text": "渐变颜色"
+      }
+    ]
+  }
+}

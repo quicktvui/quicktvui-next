@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use 'mixins/button' as *;
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(range-seek-bar) {
+
+  //
+  thumb-width: map.get($seek-bar-thumb-width, 'default');
+  thumb-height: map.get($seek-bar-thumb-height, 'default');
+
+  //
+  progress-width: map.get($seek-bar-width, 'default');
+  progress-height: map.get($seek-bar-height, 'default');
+  //
+  progress-color: map.get($seek-bar-progress-color, 'default');
+  progress-radius: map.get($seek-bar-progress-radius, 'default');
+  progress-default-color: map.get($seek-bar-progress-default-color, 'default');
+
+}

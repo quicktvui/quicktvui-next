@@ -1,0 +1,39 @@
+image: registry.extscreen.com/library/node-rsync:v20.10.0
+
+variables:
+  BUILD_DIR: docs/.vitepress/dist
+  DEPLOY_PROD_HOST: 10.35.38.112
+  DEPLOY_TEST_HOST: 10.35.38.106
+
+stages:
+  - build
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - cd docs
+    - pnpm install
+    - pnpm run build
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - $BUILD_DIR
+  only:
+    refs:
+      - doc
+  tags:
+    - docker
+
+deploy_prod_job_by_quickui_next:
+  stage: deploy
+  script:
+    - rsync -av --delete $BUILD_DIR $DEPLOY_PROD_HOST::quickui-docs-next
+  only:
+    refs:
+      - doc
+  tags:
+    - docker

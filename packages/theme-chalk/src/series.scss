@@ -1,0 +1,105 @@
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(media-series) {
+
+  @include e(number-item) {
+    width: 160px;
+    height: 80px;
+    background-color: transparent;
+    border-radius: 8px;
+
+    @include m(background) {
+      position: absolute;
+      background-color: transparent;
+      width: 160px;
+      height: 80px;
+    }
+
+    @include m(text-root) {
+      position: absolute;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 80px;
+      background-color: transparent;
+
+      @include m(text) {
+        height: 80px;
+        width: 160px;
+      }
+      @include m(vip-text) {
+        height: 80px;
+        width: 160px;
+      }
+
+
+    }
+
+
+    @include m(vip-root) {
+      position: absolute;
+      width: 45px;
+      height: 28px;
+      left: 118px;
+      border-radius: 4px;
+      background-color: transparent;
+
+      @include m(vip-root-text) {
+        width: 45px;
+        height: 28px;
+        color: white;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @include e(text-item) {
+    border-radius: 8px;
+    background-color: transparent;
+
+    @include m(background) {
+      position: absolute;
+      background-color: transparent;
+    }
+
+    @include m(container) {
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, .1);
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+
+      @include m(text) {
+        font-weight: 400;
+        height: 100px;
+      }
+
+      @include m(text-vip) {
+        font-weight: 400;
+        height: 100px;
+      }
+    }
+
+
+    @include m(vip) {
+      position: absolute;
+      width: 45px;
+      height: 28px;
+      right: 0.01px;
+      top: 0.01px;
+      border-radius: 4px;
+      background-color: transparent;
+
+      @include m(text-vip) {
+        width: 45px;
+        height: 28px;
+        color: white;
+        font-weight: 400;
+      }
+    }
+  }
+}

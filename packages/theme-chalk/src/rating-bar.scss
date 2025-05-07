@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(ratingbar) {
+  default-color: map.get($ratingbar-default-color,'normal');
+  focus-color: map.get($ratingbar-focus-color,'focus');;
+  background-color: map.get($ratingbar-bg-color, 'default');
+  //
+  @each $size in (large, default, small) {
+    //root
+    @include m($size) {
+      /*width: map.get($ratingbar-width, $size);
+      height: map.get($ratingbar-height, $size);*/
+    }
+  }
+}

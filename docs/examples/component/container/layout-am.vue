@@ -1,0 +1,43 @@
+<template>
+  <div class="es-sdk-root-css" :clipChildren="false">
+    <qt-container>
+      <qt-aside>
+        <span class="container-name-css">Aside</span>
+      </qt-aside>
+      <qt-main>
+        <span class="container-name-css">Main</span>
+      </qt-main>
+    </qt-container>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from '@vue/runtime-core'
+
+export default defineComponent({
+  name: 'QTContainerAM',
+})
+</script>
+
+<style>
+.qt-header {
+  background-color: #c7e2fe;
+}
+
+.qt-main {
+  background-color: #ecf5ff;
+}
+
+.qt-aside {
+  background-color: #daecfe;
+}
+
+.qt-footer {
+  background-color: #c7e2fe;
+}
+
+.container-name-css {
+  color: black;
+  font-size: 30px;
+}
+</style>

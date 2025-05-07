@@ -1,0 +1,286 @@
+{
+  "intro": {
+    "text": "Intro 起步",
+    "children": [
+      {
+        "text": "安装",
+        "link": "/guide/basic/installation"
+      },
+      {
+        "text": "开发工具",
+        "link": "/guide/basic/dev-tools"
+      },
+      {
+        "text": "快速开始",
+        "link": "/guide/basic/quick-start"
+      }
+    ]
+  },
+  "basic": {
+    "text": "Basics 基础",
+    "children": [
+      {
+        "text": "开发语言",
+        "link": "/guide/basic/language"
+      },
+      {
+        "text": "包管理工具",
+        "link": "/guide/basic/package-manager"
+      },
+      {
+        "text": "调试",
+        "link": "/guide/basic/dev-debug"
+      },
+      {
+        "text": "附录",
+        "link": "/guide/basic/appendix"
+      }
+    ]
+  },
+  "layout": {
+    "text": "UI & Interaction 界面交互",
+    "children": [
+      {
+        "text": "布局",
+        "link": "/guide/layout/layout"
+      },
+      {
+        "text": "样式",
+        "link": "/guide/layout/style"
+      },
+      {
+        "text": "主题",
+        "link": "/guide/layout/theming"
+      },
+      {
+        "text": "适配",
+        "link": "/guide/layout/adapter"
+      },
+      {
+        "text": "焦点",
+        "link": "/guide/interaction/focus"
+      },
+      {
+        "text": "点击",
+        "link": "/guide/interaction/click"
+      }
+    ]
+  },
+  "focus": {
+    "text": "Focus 焦点",
+    "children": [
+      {
+        "text": "焦点基础",
+        "link": "/guide/focus/basic"
+      },
+      {
+        "text": "焦点进阶",
+        "link": "/guide/focus/focus-method"
+      },
+      {
+        "text": "自动获焦",
+        "link": "/guide/focus/auto-focus"
+      },
+      {
+        "text": "列表中的自动焦点",
+        "link": "/guide/focus/list-auto-focus"
+      },
+      {
+        "text": "调试工具",
+        "link": "/guide/focus/debug-tool"
+      }
+    ]
+  },
+  "network": {
+    "text": "Network 网络",
+    "children": [
+      {
+        "text": "Fetch",
+        "link": "/guide/network/fetch"
+      },
+      {
+        "text": "Axios",
+        "link": "/guide/network/axios"
+      },
+      {
+        "text": "Web Socket",
+        "link": "/guide/network/websocket"
+      }
+    ]
+  },
+  "page": {
+    "text": "Page 页面",
+    "children": [
+      {
+        "link": "/guide/page/type",
+        "text": "页面类型"
+      },
+      {
+        "link": "/guide/page/lifecycle",
+        "text": "生命周期简介"
+      },
+      {
+        "link": "/guide/page/application-lifecycle",
+        "text": "App生命周期"
+      },
+      {
+        "link": "/guide/page/page-lifecycle",
+        "text": "Page生命周期"
+      },
+      {
+        "link": "/guide/page/page-state",
+        "text": "Page状态管理"
+      }
+    ]
+  },
+  "slot": {
+    "text": "JsView 轻卡",
+    "children": [
+      {
+        "text": "简介",
+        "link": "/guide/slot/introduction"
+      },
+      {
+        "text": "创建项目",
+        "link": "/guide/slot/project"
+      },
+      {
+        "text": "集成",
+        "link": "/guide/slot/install"
+      },
+      {
+        "text": "开发",
+        "link": "/guide/slot/develop"
+      },
+      {
+        "text": "生命周期",
+        "link": "/guide/slot/lifecycle"
+      }
+    ]
+  },
+  "router": {
+    "text": "Router 路由",
+    "children": [
+      {
+        "link": "/guide/router/introduction",
+        "text": "简介"
+      },
+      {
+        "link": "/guide/router/install",
+        "text": "集成"
+      },
+      {
+        "link": "/guide/router/entry",
+        "text": "应用入口"
+      },
+      {
+        "link": "/guide/router/error",
+        "text": "错误页面"
+      },
+      {
+        "link": "/guide/router/launch",
+        "text": "启动模式"
+      },
+      {
+        "link": "/guide/router/limit",
+        "text": "页面回收策略"
+      },
+      {
+        "link": "/guide/router/async",
+        "text": "异步路由"
+      },
+      {
+        "link": "/guide/router/result",
+        "text": "回传数据"
+      },
+      {
+        "link": "/guide/router/native",
+        "text": "原生路由"
+      }
+    ]
+  },
+  "key": {
+    "text": "Key 按键",
+    "children": [
+      {
+        "link": "/guide/key/key-event",
+        "text": "按键事件"
+      },
+      {
+        "link": "/guide/key/back",
+        "text": "返回键"
+      },
+      {
+        "link": "/guide/key/dispatch-key-event",
+        "text": "监听分发按键事件"
+      }
+    ]
+  },
+  "sfc-component": {
+    "text": "Component 组件",
+    "children": [
+      {
+        "link": "/guide/sfc-component/native-component",
+        "text": "原生组件"
+      },
+      {
+        "link": "/guide/sfc-component/async-component",
+        "text": "异步组件"
+      }
+    ]
+  },
+  "publish": {
+    "text": "Publish 发布",
+    "children": [
+      {
+        "text": "编译打包",
+        "link": "/guide/compile/pack"
+      },
+      {
+        "text": "文件资源",
+        "link": "/guide/compile/resource"
+      },
+      {
+        "text": "代码分割和异步加载",
+        "link": "/guide/compile/split-chunks"
+      },
+      {
+        "text": "代码混淆",
+        "link": "/guide/compile/obfuscator"
+      },
+      {
+        "text": "打包 RPK ( 快应用 )",
+        "link": "/guide/publish/release-rpk"
+      },
+      {
+        "text": "发布到中心仓库",
+        "link": "/guide/publish/hub"
+      },
+      {
+        "text": "打包 APK ( Android应用 )",
+        "link": "/guide/publish/release-apk"
+      }
+    ]
+  },
+  "faq": {
+    "text": "FAQ 常见问题",
+    "children": [
+      {
+        "text": "开发相关问题",
+        "link": "/guide/faq/develop-faq"
+      },
+      {
+        "text": "布局样式相关问题",
+        "link": "/guide/faq/layout-style-faq"
+      },
+      {
+        "text": "调试",
+        "link": "/guide/faq/dev-faq"
+      },
+      {
+        "text": "启动参数",
+        "link": "/guide/faq/launch-params-faq"
+      }
+    ]
+  }
+}

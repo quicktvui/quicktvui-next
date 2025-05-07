@@ -1,0 +1,121 @@
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(waterfall) {
+
+  @include e(item) {
+    background-color: transparent;
+  }
+
+  @include e(section) {
+    background-color: transparent;
+
+    @include e(title) {
+      width: 1920px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      background-color: transparent;
+      @include e(title-text) {
+        position: absolute;
+        width: 1920px;
+        height: 60px;
+        margin-left: 90px;
+        color: #ffffff;
+      }
+    }
+
+    @include e(card) {
+      background-color: transparent;
+
+      @include m(title) {
+        width: 1920px;
+        height: 60px;
+        color: #ffffff;
+        background-color: transparent;
+      }
+    }
+
+    @include e(end-section) {
+      background-color: transparent;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include m(text) {
+        width: 500px;
+        height: 50px;
+        color: rgba(255, 255, 255, .5);
+        align-self: center;
+        background-color: transparent;
+      }
+    }
+
+    @include e(flex-section) {
+      display: flex;
+      background-color: transparent;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      @include m(text) {
+        color: #ffffff;
+        background-color: transparent;
+      }
+    }
+
+    @include e(loading-section) {
+      width: 1920px;
+      height: 1080px;
+      background-color: transparent;
+
+      @include m(loading) {
+        width: 100px;
+        height: 100px;
+        align-self: center;
+        margin-top: 550px
+      }
+    }
+
+    @include e(plugin-section) {
+      display: flex;
+      background-color: transparent;
+
+      @include m(title) {
+        color: #ffffff;
+        background-color: red;
+      }
+
+      @include m(plugin) {
+        display: flex;
+        background-color: #40b883;
+      }
+    }
+
+    @include e(list-section) {
+      background-color: transparent;
+      margin-left: 0px;
+
+      @include m(title) {
+        color: #ffffff;
+        background-color: transparent;
+      }
+
+      @include m(tab) {
+        border-radius: 99px;
+        padding-top: 5px;
+        padding-bottom: 8px;
+        background-color: transparent;
+        focus-background-color: #F5F5F5;
+
+        @include m(tab-text) {
+          focusColor: #000000;
+          selectColor: #ff0000;
+          color: #ffffff80;
+        }
+      }
+    }
+  }
+}

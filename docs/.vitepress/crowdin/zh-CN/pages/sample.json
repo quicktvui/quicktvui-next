@@ -1,0 +1,15 @@
+{
+  "sample": {
+    "text": "Sample 示例",
+    "children": [
+      {
+        "link": "/api-demo",
+        "text": "API演示项目"
+      },
+      {
+        "link": "/hello-tv",
+        "text": "HelloTV"
+      }
+    ]
+  }
+}

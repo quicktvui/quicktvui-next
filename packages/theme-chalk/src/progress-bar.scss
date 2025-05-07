@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use 'mixins/button' as *;
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(progress-bar) {
+  width: map.get($progress-bar-width, 'default');
+  height: map.get($progress-bar-height, 'default');
+  progress-color: map.get($progress-bar-progress-color, 'default');
+  progress-radius: map.get($progress-bar-progress-radius, 'default');
+  progress-default-color: map.get($progress-bar-progress-default-color, 'default');
+}

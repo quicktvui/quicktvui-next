@@ -1,0 +1,7 @@
+.vitepress/crowdin/*
+!.vitepress/crowdin/en-US
+!.vitepress/crowdin/zh-CN
+temp
+fr-FR
+es-ES
+ja-JP

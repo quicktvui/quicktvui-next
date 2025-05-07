@@ -1,0 +1,48 @@
+[
+  {
+    "text": "指南",
+    "link": "/guide/overview",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "组件",
+    "link": "/component/overview",
+    "activeMatch": "/component/"
+  },
+  {
+    "text": "样式",
+    "link": "/css/overview",
+    "activeMatch": "/css/"
+  },
+  {
+    "text": "模块",
+    "link": "/module/es",
+    "activeMatch": "/module/"
+  },
+  {
+    "text": "示例",
+    "link": "/sample/hello-tv",
+    "activeMatch": "/sample/"
+  },
+  {
+    "text": "工具",
+    "link": "/tool/api/overview",
+    "activeMatch": "/tool/"
+  },
+  {
+    "text": "资源",
+    "link": "/resource/runtime",
+    "activeMatch": "/resource/"
+  },
+  {
+    "text": "SDK",
+    "link1": "/sdk/overview",
+    "link": "/sdk/first_implementation",
+    "activeMatch": "/sdk/"
+  },
+  {
+    "text": "合作",
+    "link": "/cooperation/index",
+    "activeMatch": "/cooperation/"
+  }
+]

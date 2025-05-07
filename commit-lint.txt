@@ -1,0 +1,6 @@
+⧗   input: refactor(components): QtTestView
+⚠   subject must not be sentence-case, start-case, pascal-case, upper-case [subject-case]
+
+⚠   found 0 problems, 1 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+

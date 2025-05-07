@@ -1,0 +1,47 @@
+{
+  "zh-CN": {
+    "desc": {
+      "text": "SDK集成",
+      "children": [
+        {
+          "text": "引入SDK",
+          "link": "/first_implementation"
+        },
+        {
+          "text": "初始化",
+          "link": "/first_init"
+        }
+      ]
+    },
+    "custom": {
+      "text": "功能扩展",
+      "children": [
+        {
+          "text": "自定义Moudle",
+          "link": "/cus_module"
+        },
+        {
+          "text": "自定义Component",
+          "link": "/cus_component"
+        },
+        {
+          "text": "自定义Splash",
+          "link": "/cus_splash"
+        }
+      ]
+    },
+    "special": {
+      "text": "特色功能",
+      "children": [
+        {
+          "text": "轻卡",
+          "link": "/light-card"
+        },
+        {
+          "text": "超级投屏",
+          "link": "/empty"
+        }
+      ]
+    }
+  }
+}

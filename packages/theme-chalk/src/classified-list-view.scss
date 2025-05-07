@@ -1,0 +1,143 @@
+.content_list_view {
+  width: 1920px;
+  height: 210px;
+  background-color: transparent;
+}
+
+.clv_item {
+  width: 316px;
+  height: 178px;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.coverV {
+  width: 316px;
+  height: 178px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.titMask {
+  position: absolute;
+  width: 316px;
+  height: 60px;
+  top: 118px;
+  left: 0;
+  background-color: transparent;
+}
+
+.clv_item_text_box {
+  width: 316px;
+  height: 60px;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 118px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.playMark {
+  width: 45px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: 21px;
+}
+
+.selectedIcon {
+  width: 45px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+}
+
+.selectedIcon img {
+  width: 28px;
+  height: 30px;
+  margin-left: 12px;
+}
+
+.clv_item_text {
+  width: 265px;
+  height: 60px;
+  position: absolute;
+  left: 45px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.clv_item_text_box1 {
+  width: 316px;
+  height: 60px;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 118px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.clv_item_selected_text {
+  width: 316px;
+  height: 60px;
+  background-color: transparent;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #fff;
+}
+
+
+.nav_list_view {
+  width: 1920px;
+  height: 80px;
+  background-color: transparent;
+}
+
+.nav_item {
+  width: 168px;
+  height: 80px;
+  background-color: transparent;
+  border-radius: 40px;
+}
+
+.nav_item_text_focused {
+  width: 168px;
+  height: 80px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 40px;
+}
+
+.nav_item_text {
+  width: 168px;
+  height: 80px;
+  position: absolute;
+  border-radius: 40px;
+  background-color: transparent;
+}
+
+.text {
+  width: 168px;
+  height: 80px;
+  color: #fff;
+  position: absolute;
+}
+
+.text_selected {
+  width: 168px;
+  height: 80px;
+  color: #0D71FF;
+  position: absolute;
+}
+
+.line {
+  background-color: #0D71FF;
+  width: 34px;
+  height: 6px;
+  position: absolute;
+  left: 67px;
+  top: 74px;
+}

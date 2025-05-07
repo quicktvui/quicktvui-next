@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(app-icon-sample) {
+  //
+  background-color: map.get($app-icon-sample-bg-color, 'default');
+
+  //
+  @each $size in (large, default, small, mini) {
+    //root
+    @include m($size) {
+      width: map.get($app-icon-sample-width, $size);
+      height: map.get($app-icon-sample-height, $size);
+    }
+  }
+}
+
+

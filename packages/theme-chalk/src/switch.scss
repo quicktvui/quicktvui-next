@@ -1,0 +1,16 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
+
+@include b(switch) {
+  active-color: map.get($switch-active-color,'default');
+
+  @each $size in (large, default, small) {
+    @include m($size) {
+      width: map.get($switch-width, $size);
+      height: map.get($switch-height, $size);
+    }
+  }
+}

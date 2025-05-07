@@ -1,0 +1,12 @@
+// 覆写button的根样式 .qt-button
+.qt-button {
+  align-items: center;
+  background-color: red;
+  flex-direction: row;
+  justify-content: center;
+  //自定义样式打开此注释
+  //focus-background-color: $color-primary;
+}
+
+// 焦点颜色引入 quicktvui 样式变量 $color-primary
+//focus-background-color: $color-primary;
