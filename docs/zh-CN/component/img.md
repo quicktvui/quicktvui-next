@@ -5,10 +5,6 @@ lang: zh-CN
 
 # img
 
-::: tip 关于图片资源打包
-[点击查看详细](/zh-CN/guide/compile/resource)
-:::
-
 ## 网络图片
 
 `<img src="图片地址"/>`
@@ -20,6 +16,10 @@ component/img/network
 :::
 
 ## 本地图片
+
+::: tip 关于本地图片资源打包 file-loader 和 url-loader
+[点击查看详细](/zh-CN/guide/compile/resource)
+:::
 
 ```ts
 import logoImg from '../../assets/logo.png'
