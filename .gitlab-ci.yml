@@ -6,7 +6,6 @@ variables:
   DEPLOY_TEST_HOST: 10.35.38.106
 
 stages:
-  - build
   - deploy
 
 build_job:

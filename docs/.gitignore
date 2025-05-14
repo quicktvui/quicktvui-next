@@ -5,3 +5,8 @@ temp
 fr-FR
 es-ES
 ja-JP
+
+# 保留 .vitepress/dist/
+!.vitepress/dist/
+# 必须添加这一行以包含文件内容
+!.vitepress/dist/**
