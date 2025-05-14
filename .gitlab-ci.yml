@@ -8,24 +8,24 @@ variables:
 stages:
   - deploy
 
-build_job:
-  stage: build
-  script:
-    - cd docs
-    - pnpm install
-    - pnpm run build
-  cache:
-    paths:
-      - node_modules/
-  artifacts:
-    expire_in: 1 day
-    paths:
-      - $BUILD_DIR
-  only:
-    refs:
-      - main
-  tags:
-    - docker
+# build_job:
+#   stage: build
+#   script:
+#     - cd docs
+#     - pnpm install
+#     - pnpm run build
+#   cache:
+#     paths:
+#       - node_modules/
+#   artifacts:
+#     expire_in: 1 day
+#     paths:
+#       - $BUILD_DIR
+#   only:
+#     refs:
+#       - main
+#   tags:
+#     - docker
 
 deploy_prod_job_by_quickui_next:
   stage: deploy
