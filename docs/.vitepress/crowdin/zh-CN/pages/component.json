@@ -537,5 +537,30 @@
         "text": "播放管理器"
       }
     ]
+  },
+  "html": {
+    "text": "Html 快应用组件",
+    "children": [
+      {
+        "link": "/html/introduction",
+        "text": "简介"
+      },
+      {
+        "link": "/html/installation",
+        "text": "集成"
+      },
+      {
+        "link": "/html/video",
+        "text": "video"
+      },
+      {
+        "link": "/html/audio",
+        "text": "audio"
+      },
+      {
+        "link": "/html/h",
+        "text": "h"
+      }
+    ]
   }
 }
