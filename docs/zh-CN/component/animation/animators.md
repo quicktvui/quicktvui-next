@@ -46,10 +46,10 @@ animationRef.value?.animatorSet('SequentiallyAnimatorsId', -1, false);
 #### 第2步：创建动画并加入到动画合集
 
 ``` js
-animationRef.value?.objectAnimator('AlphaAnimationId');
-animationRef.value?.objectAnimator('ScaleAnimationId');
-animationRef.value?.objectAnimator('RotationAnimationId');
-animationRef.value?.objectAnimator('TranslationAnimationId');
+animationRef.value?.animator('AlphaAnimationId');
+animationRef.value?.animator('ScaleAnimationId');
+animationRef.value?.animator('RotationAnimationId');
+animationRef.value?.animator('TranslationAnimationId');
 
 //playSequentially4
 animationRef.value?.playSequentially(
@@ -69,7 +69,7 @@ animationRef.value?.playSequentially(
 #### 第3步：执行动画合集
 
 ```js
-animationRef.value?.startAnimator('SequentiallyAnimatorsId');
+animationRef.value?.start('SequentiallyAnimatorsId');
 ```
 
 ### 2、playTogether
@@ -86,10 +86,10 @@ animationRef.value?.animatorSet('TogetherAnimatorsId', -1, false);
 #### 第2步：创建动画并加入到动画合集
 
 ``` js
-animationRef.value?.objectAnimator('AlphaAnimationId');
-animationRef.value?.objectAnimator('ScaleAnimationId');
-animationRef.value?.objectAnimator('RotationAnimationId');
-animationRef.value?.objectAnimator('TranslationAnimationId');
+animationRef.value?.animator('AlphaAnimationId');
+animationRef.value?.animator('ScaleAnimationId');
+animationRef.value?.animator('RotationAnimationId');
+animationRef.value?.animator('TranslationAnimationId');
 
 //playTogether4
 animationRef.value?.playTogether(
@@ -109,7 +109,7 @@ animationRef.value?.playTogether(
 #### 第3步：执行动画合集
 
 ```js
-animationRef.value?.startAnimator('TogetherAnimatorsId');
+animationRef.value?.start('TogetherAnimatorsId');
 ```
 
 ### 3、with
@@ -126,8 +126,8 @@ animationRef.value?.animatorSet('WithAnimatorsId', -1, false);
 #### 第2步：创建动画并加入到动画合集
 
 ```js
-animationRef.value?.objectAnimator('AlphaAnimationId');
-animationRef.value?.objectAnimator('ScaleAnimationId');
+animationRef.value?.animator('AlphaAnimationId');
+animationRef.value?.animator('ScaleAnimationId');
 
 //AlphaAnimationId
 animationRef.value?.play(
@@ -145,7 +145,7 @@ animationRef.value?.with(
 #### 第3步：执行动画合集
 
 ```js
-animationRef.value?.startAnimator('WithAnimatorsId');
+animationRef.value?.start('WithAnimatorsId');
 ```
 
 ### 4、before
@@ -162,8 +162,8 @@ animationRef.value?.animatorSet('BeforeAnimatorsId', -1, false);
 #### 第2步：创建动画并加入到动画合集
 
 ```js
-animationRef.value?.objectAnimator('AlphaAnimationId');
-animationRef.value?.objectAnimator('ScaleAnimationId');
+animationRef.value?.animator('AlphaAnimationId');
+animationRef.value?.animator('ScaleAnimationId');
 
 //AlphaAnimationId
 animationRef.value?.play(
@@ -181,7 +181,7 @@ animationRef.value?.before(
 #### 第3步：执行动画合集
 
 ```js
-animationRef.value?.startAnimator('BeforeAnimatorsId');
+animationRef.value?.start('BeforeAnimatorsId');
 ```
 
 ### 5、after
@@ -198,8 +198,8 @@ animationRef.value?.animatorSet('AfterAnimatorsId', -1, false);
 #### 第2步：创建动画并加入到动画合集
 
 ```js
-animationRef.value?.objectAnimator('AlphaAnimationId');
-animationRef.value?.objectAnimator('ScaleAnimationId');
+animationRef.value?.animator('AlphaAnimationId');
+animationRef.value?.animator('ScaleAnimationId');
 
 //AlphaAnimationId
 animationRef.value?.play(
@@ -217,7 +217,7 @@ animationRef.value?.after(
 #### 第3步：执行动画合集
 
 ```js
-animationRef.value?.startAnimator('AfterAnimatorsId');
+animationRef.value?.start('AfterAnimatorsId');
 ```
 
 :::demo ## 完整示例

@@ -72,7 +72,7 @@ export default defineComponent({
     function playSequentially() {
       //1.
       animationRef.value?.animatorSet('SequentiallyAnimatorsId', -1, false)
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'AlphaAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
@@ -83,7 +83,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'ScaleAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
@@ -94,7 +94,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'RotationAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
@@ -105,7 +105,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'TranslationAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -122,13 +122,13 @@ export default defineComponent({
         'RotationAnimationId',
         'TranslationAnimationId',
       ])
-      animationRef.value?.startAnimator('SequentiallyAnimatorsId')
+      animationRef.value?.start('SequentiallyAnimatorsId')
     }
 
     function playTogether() {
       //1.
       animationRef.value?.animatorSet('TogetherAnimatorsId', -1, false)
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'AlphaAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
@@ -139,7 +139,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'ScaleAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
@@ -150,7 +150,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'RotationAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
@@ -161,7 +161,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'TranslationAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -178,13 +178,13 @@ export default defineComponent({
         'RotationAnimationId',
         'TranslationAnimationId',
       ])
-      animationRef.value?.startAnimator('TogetherAnimatorsId')
+      animationRef.value?.start('TogetherAnimatorsId')
     }
 
     function playWith() {
       //1.
       animationRef.value?.animatorSet('WithAnimatorsId', -1, false)
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'AlphaAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
@@ -195,7 +195,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'ScaleAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
@@ -208,13 +208,13 @@ export default defineComponent({
       )
       animationRef.value?.play('WithAnimatorsId', 'AlphaAnimationId')
       animationRef.value?.playWith('WithAnimatorsId', 'ScaleAnimationId')
-      animationRef.value?.startAnimator('WithAnimatorsId')
+      animationRef.value?.start('WithAnimatorsId')
     }
 
     function playBefore() {
       //1.
       animationRef.value?.animatorSet('BeforeAnimatorsId', -1, false)
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'TranslationAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -225,7 +225,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'ScaleAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
@@ -238,13 +238,13 @@ export default defineComponent({
       )
       animationRef.value?.play('BeforeAnimatorsId', 'TranslationAnimationId')
       animationRef.value?.playBefore('BeforeAnimatorsId', 'ScaleAnimationId')
-      animationRef.value?.startAnimator('BeforeAnimatorsId')
+      animationRef.value?.start('BeforeAnimatorsId')
     }
 
     function playAfter() {
       //1.
       animationRef.value?.animatorSet('WidthAnimatorsId', -1, false)
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'TranslationAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -255,7 +255,7 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'ScaleAnimationId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
@@ -268,31 +268,31 @@ export default defineComponent({
       )
       animationRef.value?.play('WidthAnimatorsId', 'TranslationAnimationId')
       animationRef.value?.playAfter('WidthAnimatorsId', 'ScaleAnimationId')
-      animationRef.value?.startAnimator('WidthAnimatorsId')
+      animationRef.value?.start('WidthAnimatorsId')
     }
 
     function startAnimatorDelay() {
-      animationRef.value?.startAnimatorDelay('SequentiallyAnimatorsId', 2000)
+      animationRef.value?.startDelay('SequentiallyAnimatorsId', 2000)
     }
 
     function reverseAnimator() {
-      animationRef.value?.reverseAnimator('SequentiallyAnimatorsId')
+      animationRef.value?.reverse('SequentiallyAnimatorsId')
     }
 
     function pauseAnimator() {
-      animationRef.value?.pauseAnimator('SequentiallyAnimatorsId')
+      animationRef.value?.pause('SequentiallyAnimatorsId')
     }
 
     function resumeAnimator() {
-      animationRef.value?.resumeAnimator('SequentiallyAnimatorsId')
+      animationRef.value?.resume('SequentiallyAnimatorsId')
     }
 
     function cancelAnimator() {
-      animationRef.value?.cancelAnimator('SequentiallyAnimatorsId')
+      animationRef.value?.cancel('SequentiallyAnimatorsId')
     }
 
     function resetAnimators() {
-      animationRef.value?.resetAnimators()
+      animationRef.value?.reset()
     }
 
     function onBackPressed() {

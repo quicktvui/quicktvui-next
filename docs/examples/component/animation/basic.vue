@@ -40,7 +40,7 @@ export default defineComponent({
     const router = useESRouter()
 
     function initAnimator() {
-      animationRef.value?.objectAnimator(
+      animationRef.value?.animator(
         'AnimatorId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
@@ -51,27 +51,27 @@ export default defineComponent({
         false,
         false
       )
-      animationRef.value?.startAnimator('AnimatorId')
+      animationRef.value?.start('AnimatorId')
     }
 
     function reverseAnimator() {
-      animationRef.value?.reverseAnimator('AnimatorId')
+      animationRef.value?.reverse('AnimatorId')
     }
 
     function pauseAnimator() {
-      animationRef.value?.pauseAnimator('AnimatorId')
+      animationRef.value?.pause('AnimatorId')
     }
 
     function resumeAnimator() {
-      animationRef.value?.resumeAnimator('AnimatorId')
+      animationRef.value?.resume('AnimatorId')
     }
 
     function cancelAnimator() {
-      animationRef.value?.cancelAnimator('AnimatorId')
+      animationRef.value?.cancel('AnimatorId')
     }
 
     function resetAnimators() {
-      animationRef.value?.resetAnimators()
+      animationRef.value?.reset()
     }
 
     function onBackPressed() {

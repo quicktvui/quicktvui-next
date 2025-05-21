@@ -34,7 +34,7 @@ export interface QTAnimationInterpolator {
 ## 示例代码
 
 ```js
-animationRef.value?.objectAnimator(
+animationRef.value?.animator(
   "AccelerateInterpolator",//自定义id
   QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
   QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,

@@ -49,7 +49,7 @@ export default defineComponent({
     const router = useESRouter()
 
     function initTwo() {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '2', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -60,11 +60,11 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('2')
+      animationViewRef.value?.start('2')
     }
 
     function initThree() {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '3', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -75,11 +75,11 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('3')
+      animationViewRef.value?.start('3')
     }
 
     function initFour() {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '4', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -90,11 +90,11 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('4')
+      animationViewRef.value?.start('4')
     }
 
     function initN() {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         'n', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -105,11 +105,11 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('n')
+      animationViewRef.value?.start('n')
     }
 
     function startAnimatorDelay() {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '5', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -120,27 +120,27 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimatorDelay('5', 2000)
+      animationViewRef.value?.startDelay('5', 2000)
     }
 
     function reverseAnimator() {
-      animationViewRef.value?.reverseAnimator('n')
+      animationViewRef.value?.reverse('n')
     }
 
     function pauseAnimator() {
-      animationViewRef.value?.pauseAnimator('n')
+      animationViewRef.value?.pause('n')
     }
 
     function resumeAnimator() {
-      animationViewRef.value?.resumeAnimator('n')
+      animationViewRef.value?.resume('n')
     }
 
     function cancelAnimator() {
-      animationViewRef.value?.cancelAnimator('n')
+      animationViewRef.value?.cancel('n')
     }
 
     function resetAnimators() {
-      animationViewRef.value?.resetAnimators()
+      animationViewRef.value?.reset()
     }
 
     function onBackPressed() {

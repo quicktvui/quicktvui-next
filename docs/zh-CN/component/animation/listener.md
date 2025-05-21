@@ -10,7 +10,7 @@ lang: zh-CN
 ### 第1步：创建动画的时候需要设置是否监听动画状态变化
 
 ```js
-animationRef.value?.objectAnimator(
+animationRef.value?.animator(
   "1",//自定义id
   QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
   QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -114,7 +114,7 @@ export default defineComponent({
 ### 第1步： 创建动画的时候需要设置是否监听动画属性值变化
 
 ```js
-animationViewRef.value?.objectAnimator(
+animationViewRef.value?.animator(
   "1",//自定义id
   QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
   QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,

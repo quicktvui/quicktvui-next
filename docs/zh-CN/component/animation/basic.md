@@ -22,7 +22,7 @@ lang: zh-CN
 创建单个动画和动画合集都需要自定义`不重复的id`，用来后续执行动画的各种操作。
 
 ```ts
-animationRef.value?.objectAnimator(                           //创建属性值的动画
+animationRef.value?.animator(                                //创建属性值的动画
   "1",                                                       //自定义id
   QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,        //动画属性值类型
   QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,  //动画属性类型
@@ -44,41 +44,41 @@ animationRef.value?.objectAnimator(                           //创建属性值�
 
 参数为创建的动画的`id`
 
-`animationViewRef.value?.startAnimator("1");`
+`animationViewRef.value?.start("1");`
 
 ### 延迟开始动画
 
 参数为创建的动画的`id`
 
-`animationViewRef.value?.startAnimatorDelay("1", 2000);`
+`animationViewRef.value?.startDelay("1", 2000);`
 
 ### 暂停动画
 
 参数为创建的动画的`id`
 
-`animationViewRef.value?.pauseAnimator("1");`
+`animationViewRef.value?.pause("1");`
 
 ### 恢复动画
 
 参数为创建的动画的`id`
 
-`animationViewRef.value?.resumeAnimator("1");`
+`animationViewRef.value?.resume("1");`
 
 ### 取消动画
 
 参数为创建的动画的`id`
 
-`animationViewRef.value?.cancelAnimator("1");`
+`animationViewRef.value?.cancel("1");`
 
 ### 翻转动画
 
 参数为创建的动画的`id`
 
-`animationViewRef.value?.reverseAnimator("1");`
+`animationViewRef.value?.reverse("1");`
 
 ### 重置所有动画
 
-`animationViewRef.value?.resetAnimators();`
+`animationViewRef.value?.reset();`
 
 :::demo ## 完整示例
 

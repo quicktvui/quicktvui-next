@@ -57,7 +57,7 @@ export default defineComponent({
     const animationViewRef = ref<QTIAnimation>()
 
     function init() {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         'AnimationListener', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
@@ -68,7 +68,7 @@ export default defineComponent({
         true, //listenAnimator
         true //listenAnimatorValue
       )
-      animationViewRef.value?.startAnimator('AnimationListener')
+      animationViewRef.value?.start('AnimationListener')
     }
 
     function onAnimationCancel(id) {
@@ -100,23 +100,23 @@ export default defineComponent({
     }
 
     function reverseAnimator() {
-      animationViewRef.value?.reverseAnimator('AnimationListener')
+      animationViewRef.value?.reverse('AnimationListener')
     }
 
     function pauseAnimator() {
-      animationViewRef.value?.pauseAnimator('AnimationListener')
+      animationViewRef.value?.pause('AnimationListener')
     }
 
     function resumeAnimator() {
-      animationViewRef.value?.resumeAnimator('AnimationListener')
+      animationViewRef.value?.resume('AnimationListener')
     }
 
     function cancelAnimator() {
-      animationViewRef.value?.cancelAnimator('AnimationListener')
+      animationViewRef.value?.cancel('AnimationListener')
     }
 
     function resetAnimators() {
-      animationViewRef.value?.resetAnimators()
+      animationViewRef.value?.reset()
     }
 
     function onBackPressed() {

@@ -65,7 +65,7 @@ export default defineComponent({
       if (value > 45 || value < -45) {
         return
       }
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '4',
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
@@ -76,7 +76,7 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('4')
+      animationViewRef.value?.start('4')
       rotation = value
     }
 
@@ -101,7 +101,7 @@ export default defineComponent({
     }
 
     function startRotationX(value: number) {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '2', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_X,
@@ -112,7 +112,7 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('2')
+      animationViewRef.value?.start('2')
       rotationX = value
     }
 
@@ -125,7 +125,7 @@ export default defineComponent({
     }
 
     function startRotationY(value: number) {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '3', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_Y,
@@ -136,13 +136,13 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('3')
+      animationViewRef.value?.start('3')
       rotationY = value
     }
 
     //------------------------------------------------------------
     function reset() {
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '5',
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
@@ -153,9 +153,9 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('5')
+      animationViewRef.value?.start('5')
 
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '6', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_X,
@@ -166,9 +166,9 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('6')
+      animationViewRef.value?.start('6')
 
-      animationViewRef.value?.objectAnimator(
+      animationViewRef.value?.animator(
         '7', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION_Y,
@@ -179,7 +179,7 @@ export default defineComponent({
         false,
         false
       )
-      animationViewRef.value?.startAnimator('7')
+      animationViewRef.value?.start('7')
     }
 
     //------------------------------------------------------------
@@ -196,23 +196,23 @@ export default defineComponent({
     }
 
     function reverseAnimator() {
-      animationViewRef.value?.reverseAnimator('n')
+      animationViewRef.value?.reverse('n')
     }
 
     function pauseAnimator() {
-      animationViewRef.value?.pauseAnimator('n')
+      animationViewRef.value?.pause('n')
     }
 
     function resumeAnimator() {
-      animationViewRef.value?.resumeAnimator('n')
+      animationViewRef.value?.resume('n')
     }
 
     function cancelAnimator() {
-      animationViewRef.value?.cancelAnimator('n')
+      animationViewRef.value?.cancel('n')
     }
 
     function resetAnimators() {
-      animationViewRef.value?.resetAnimators()
+      animationViewRef.value?.reset()
     }
 
     function onBackPressed() {

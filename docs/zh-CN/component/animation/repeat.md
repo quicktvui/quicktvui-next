@@ -26,7 +26,7 @@ lang: zh-CN
 示例代码
 
 ```js
- animationViewRef.value?.objectAnimator(
+ animationViewRef.value?.animator(
   "2",//自定义id
   QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
   QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,

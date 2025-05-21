@@ -71,14 +71,15 @@ lang: zh-CN
 | setPivotX    | 设置x轴方向的旋转点        | ^[Function]`(pivotX: number) => void`     |
 | setPivotY    | 设置y轴方向的旋转点        | ^[Function]`(pivotY: number) => void`     |
 | resetPivot    | 重置旋转点        | ^[Function]`() => void`     |
-| resetAnimators    | 重置所有动画        | ^[Function]`() => void`     |
+| animator    | 创建动画        | ^[Function]`(id: QTAnimatorId, valueType: QTAnimationValueType, propertyName: QTAnimationPropertyName, values: number[], duration: number, repeatMode: QTAnimationRepeatMode, repeatCount: number, listenAnimator: boolean, listenAnimatorValue: boolean, interpolator?: QTAnimationInterpolator) => void`     |
 | animatorSet    | 创建动画集合        | ^[Function]`(animatorId: QTAnimatorId, duration: number, listenAnimator: boolean) => void`     |
-| startAnimator    | 开始动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
-| startAnimatorDelay    | 延迟开始动画        | ^[Function]`(animatorId: QTAnimatorId, delay: number) => void`     |
-| pauseAnimator    | 暂停动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
-| resumeAnimator    | 恢复动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
-| cancelAnimator    | 取消动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
-| reverseAnimator    | 逆转动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
+| reset    | 重置所有动画        | ^[Function]`() => void`     |
+| start    | 开始动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
+| startDelay    | 延迟开始动画        | ^[Function]`(animatorId: QTAnimatorId, delay: number) => void`     |
+| pause    | 暂停动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
+| resume    | 恢复动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
+| cancel    | 取消动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
+| reverse    | 逆转动画        | ^[Function]`(animatorId: QTAnimatorId) => void`     |
 | play    | 播放动画        | ^[Function]`(animatorSetId: QTAnimatorId, animatorId: QTAnimatorId) => void`     |
 | playWith    | 同时播放动画        | ^[Function]`(animatorSetId: QTAnimatorId, animatorId: QTAnimatorId) => void`     |
 | playBefore    | 在之前播放动画        | ^[Function]`(animatorSetId: QTAnimatorId, animatorId: QTAnimatorId) => void`     |
@@ -86,4 +87,3 @@ lang: zh-CN
 | playAfterDelay    | 在之后延迟播放动画        | ^[Function]`(animatorSetId: QTAnimatorId, animatorId: QTAnimatorId) => void`     |
 | playSequentially    | 顺序播放动画        | ^[Function]`(animatorSetId: QTAnimatorId, animatorIds: QTAnimatorId[]) => void`     |
 | playTogether    | 同时播放动画        | ^[Function]`(animatorSetId: QTAnimatorId, animatorIds: QTAnimatorId[]) => void`     |
-| objectAnimator    | 创建动画        | ^[Function]`(id: QTAnimatorId, valueType: QTAnimationValueType, propertyName: QTAnimationPropertyName, values: number[], duration: number, repeatMode: QTAnimationRepeatMode, repeatCount: number, listenAnimator: boolean, listenAnimatorValue: boolean, interpolator?: QTAnimationInterpolator) => void`     |
