@@ -26,15 +26,11 @@ lang: zh-CN
 示例代码
 
 ```js
- animationViewRef.value?.objectAnimator5(
+ animationViewRef.value?.objectAnimator(
   "2",//自定义id
   QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
   QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
-  0,
-  300,
-  0,
-  -300,
-  0,
+  [0, 300, 0, -300, 0],
   1000,
   QTAnimationRepeatMode.QT_ANIMATION_REPEAT_MODE_REVERSE,
   2,

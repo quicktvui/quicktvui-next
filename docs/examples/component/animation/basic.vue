@@ -40,20 +40,11 @@ export default defineComponent({
     const router = useESRouter()
 
     function initAnimator() {
-      animationRef.value?.objectAnimator10(
+      animationRef.value?.objectAnimator(
         'AnimatorId', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
+        [0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
         10000,
         -1,
         0,

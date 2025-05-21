@@ -57,15 +57,11 @@ export default defineComponent({
     const animationViewRef = ref<QTIAnimation>()
 
     function init() {
-      animationViewRef.value?.objectAnimator5(
+      animationViewRef.value?.objectAnimator(
         'AnimationListener', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
-        0,
-        500,
-        0,
-        -500,
-        0,
+        [0, 500, 0, -500, 0],
         10000,
         -1,
         0,

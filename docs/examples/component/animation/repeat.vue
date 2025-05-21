@@ -45,15 +45,11 @@ export default defineComponent({
     const router = useESRouter()
 
     function restartMode() {
-      animationViewRef.value?.objectAnimator5(
+      animationViewRef.value?.objectAnimator(
         'AnimationRestartRepeatMode', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
-        0,
-        300,
-        0,
-        -300,
-        0,
+        [0, 300, 0, -300, 0],
         1000,
         QTAnimationRepeatMode.QT_ANIMATION_REPEAT_MODE_RESTART,
         2,
@@ -64,15 +60,11 @@ export default defineComponent({
     }
 
     function reverseMode() {
-      animationViewRef.value?.objectAnimator5(
+      animationViewRef.value?.objectAnimator(
         'AnimationReverseRepeatMode', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
-        0,
-        300,
-        0,
-        -300,
-        0,
+        [0, 300, 0, -300, 0],
         1000,
         QTAnimationRepeatMode.QT_ANIMATION_REPEAT_MODE_REVERSE,
         2,
@@ -83,15 +75,11 @@ export default defineComponent({
     }
 
     function infiniteMode() {
-      animationViewRef.value?.objectAnimator5(
+      animationViewRef.value?.objectAnimator(
         'AnimationRepeatInfinite', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_Y,
-        0,
-        300,
-        0,
-        -300,
-        0,
+        [0, 300, 0, -300, 0],
         1000,
         QTAnimationRepeatMode.QT_ANIMATION_REPEAT_MODE_RESTART,
         -1,

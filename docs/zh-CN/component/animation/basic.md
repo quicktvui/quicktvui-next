@@ -22,12 +22,11 @@ lang: zh-CN
 创建单个动画和动画合集都需要自定义`不重复的id`，用来后续执行动画的各种操作。
 
 ```ts
-animationRef.value?.objectAnimator2(                           //创建2个属性值的动画
+animationRef.value?.objectAnimator(                           //创建属性值的动画
   "1",                                                       //自定义id
   QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,        //动画属性值类型
   QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,  //动画属性类型
-  "0",                                                       //属性值
-  "1",                                                       //属性值
+  ["0", "1"],                                                //属性值
   1000,                                                      //动画执行时间
   -1,                                                        //动画重复执行模式
   0,                                                         //动画重复执行次数
@@ -38,22 +37,6 @@ animationRef.value?.objectAnimator2(                           //创建2个属�
   }
 );
 ```
-
-#### 创建多个参数动画
-
-* 创建2个参数的动画
-  `animationRef.value?.objectAnimator2(参数)`
-
-* 创建3个参数的动画
-  `animationRef.value?.objectAnimator3(参数)`
-
-* 创建4个参数的动画
-  `animationRef.value?.objectAnimator4(参数)`
-
-* 创建5个参数的动画
-  `animationRef.value?.objectAnimator5(参数)`
-
-以此类推，最多可以创建10个参数的动画。
 
 ## 第三步、执行动画
 

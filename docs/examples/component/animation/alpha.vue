@@ -49,12 +49,11 @@ export default defineComponent({
     const router = useESRouter()
 
     function initTwo() {
-      animationRef.value?.objectAnimator2(
+      animationRef.value?.objectAnimator(
         '2', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
-        0,
-        1,
+        [0, 1],
         1000,
         -1,
         0,
@@ -65,13 +64,11 @@ export default defineComponent({
     }
 
     function initThree() {
-      animationRef.value?.objectAnimator3(
+      animationRef.value?.objectAnimator(
         '3', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
-        0,
-        1,
-        0,
+        [0, 1, 0],
         1000,
         -1,
         0,
@@ -82,14 +79,11 @@ export default defineComponent({
     }
 
     function initFour() {
-      animationRef.value?.objectAnimator4(
+      animationRef.value?.objectAnimator(
         '4', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
-        0,
-        1,
-        0,
-        1,
+        [0, 1, 0, 1],
         1000,
         -1,
         0,
@@ -100,20 +94,11 @@ export default defineComponent({
     }
 
     function initN() {
-      animationRef.value?.objectAnimator10(
+      animationRef.value?.objectAnimator(
         'n', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
+        [0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
         10000,
         -1,
         0,
@@ -124,15 +109,11 @@ export default defineComponent({
     }
 
     function startAnimatorDelay() {
-      animationRef.value?.objectAnimator5(
+      animationRef.value?.objectAnimator(
         '5', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
-        0,
-        1,
-        0,
-        1,
-        0,
+        [0, 1, 0, 1, 0],
         1000,
         -1,
         0,

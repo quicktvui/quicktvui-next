@@ -53,12 +53,11 @@ export default defineComponent({
     const router = useESRouter()
 
     function initTwo() {
-      animationViewRef.value?.objectAnimator2(
+      animationViewRef.value?.objectAnimator(
         '2', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
-        0,
-        30,
+        [0, 30],
         1000,
         -1,
         0,
@@ -69,13 +68,11 @@ export default defineComponent({
     }
 
     function initThree() {
-      animationViewRef.value?.objectAnimator3(
+      animationViewRef.value?.objectAnimator(
         '3', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
-        0,
-        30,
-        60,
+        [0, 30, 60],
         1000,
         -1,
         0,
@@ -86,14 +83,11 @@ export default defineComponent({
     }
 
     function initFour() {
-      animationViewRef.value?.objectAnimator4(
+      animationViewRef.value?.objectAnimator(
         '4', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
-        0,
-        30,
-        60,
-        360,
+        [0, 30, 60, 360],
         1000,
         -1,
         0,
@@ -104,20 +98,11 @@ export default defineComponent({
     }
 
     function initN() {
-      animationViewRef.value?.objectAnimator10(
+      animationViewRef.value?.objectAnimator(
         'n', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
-        0,
-        30,
-        60,
-        360,
-        0,
-        30,
-        60,
-        360,
-        60,
-        360,
+        [0, 30, 60, 360, 0, 30, 60, 360, 60, 360],
         10000,
         -1,
         0,
@@ -128,15 +113,11 @@ export default defineComponent({
     }
 
     function startAnimatorDelay() {
-      animationViewRef.value?.objectAnimator5(
+      animationViewRef.value?.objectAnimator(
         '5', //自定义id
         QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT,
         QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ROTATION,
-        0,
-        30,
-        60,
-        360,
-        60,
+        [0, 30, 60, 360, 60],
         1000,
         -1,
         0,
