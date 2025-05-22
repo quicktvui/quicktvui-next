@@ -9,6 +9,10 @@
       {
         "link": "/hello-tv",
         "text": "HelloTV"
+      },
+      {
+        "link": "/app-list",
+        "text": "快应用集合"
       }
     ]
   }
