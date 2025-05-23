@@ -9,9 +9,13 @@ lang: zh-CN
 
 <img src="/component/animation/animation_alpha.gif" />
 
-## 完整示例
+:::demo ## 属性实现
 
-:::demo
+component/animation/alpha-props
+
+:::
+
+:::demo ## 方法实现
 
 component/animation/alpha
 

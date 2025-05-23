@@ -218,8 +218,12 @@
         "text": "简介"
       },
       {
-        "link": "/animation/basic",
-        "text": "基础用法"
+        "link": "/animation/props",
+        "text": "使用属性"
+      },
+      {
+        "link": "/animation/method",
+        "text": "使用方法"
       },
       {
         "link": "/animation/alpha",

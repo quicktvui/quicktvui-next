@@ -5,9 +5,12 @@ lang: zh-CN
 
 # 简介
 
-## 一、 动画是执行的单一动画，动画合集是多个动画组成的执行合集。
+## 一、 动画是执行的单一动画，动画合集是多个动画组成的执行合集，统称动画。
 
-## 二、 动画和动画合集通过自定义的 动画id 执行所有的操作。
+## 二、 创建动画两种方式：
+
+* [使用属性创建](/zh-CN/component/animation/props)
+* [使用方法创建](/zh-CN/component/animation/method)
 
 ## 三、 动画类型：
 
@@ -45,6 +48,15 @@ lang: zh-CN
 * `QT_ANIMATION_VALUE_TYPE_FLOAT = "ofFloat"`
 
 ## API
+
+
+### Attributes
+
+| Name                        | Description       | Type                     | Default  |
+| --------------------------- | ----------------- | -----------------------  | -------- |
+| animator                    | 动画属性值     | ^[QTAnimator] \| ^[QTAnimatorSet]             | -        |
+| autoPlay                    | 自动播放     | ^[boolean]             | false        |
+| loop                    | 循环播放     | ^[boolean]            | false        |
 
 ### Events
 

@@ -10,7 +10,13 @@ lang: zh-CN
 <img src="/component/animation/animation_rotation.gif" />
 
 
-:::demo ## 完整示例
+:::demo ## 属性实现
+
+component/animation/rotation-props
+
+:::
+
+:::demo ## 方法实现
 
 component/animation/rotation
 
