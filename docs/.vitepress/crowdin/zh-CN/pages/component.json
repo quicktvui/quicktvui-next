@@ -564,6 +564,10 @@
       {
         "link": "/html/h",
         "text": "h"
+      },
+      {
+        "link": "/html/alert",
+        "text": "alert"
       }
     ]
   }
