@@ -311,7 +311,7 @@
       ]
     },
     "media": {
-      "text": "MediaPlayer 媒体播放组件",
+      "text": "媒体播放简介",
       "children": [
         {
           "link": "/player/media-player",
