@@ -1,0 +1,15 @@
+import{o as s,c as a,a as t}from"./app.f9d0994b.js";const r='{"title":"\u5E94\u7528\u5165\u53E3","description":"","frontmatter":{"title":"\u5E94\u7528\u5165\u53E3","lang":"zh-CN"},"headers":[],"relativePath":"zh-CN/guide/router/entry.md","lastUpdated":1746602666000}',o={},u=Object.assign(o,{__name:"entry",setup(p){return(e,n)=>(s(),a("div",null,n[0]||(n[0]=[t(`<h1 id="\u5E94\u7528\u5165\u53E3" tabindex="-1">\u5E94\u7528\u5165\u53E3 <a class="header-anchor vp-link" href="#\u5E94\u7528\u5165\u53E3" aria-hidden="true">#</a></h1><p>\u5E94\u7528\u7684\u5165\u53E3\u9700\u8981\u914D\u7F6E\u5728<code>RouterOptions</code>\u4E2D\u3002\u4EE5<code>main</code>\u5B57\u6BB5\u4E3Akey\uFF0C\u5165\u53E3\u9875\u9762\u8DEF\u5F84\u4E3Avalue\u3002 \u4F8B\u5982\uFF1A\u5728<code>RouterOptions</code>\u4E2D\u8BBE\u7F6E\u5E94\u7528\u5165\u53E3\u9875\u9762\u4E3A<code>index</code>\u3002</p><div class="language-ts"><pre><code>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createESRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@extscreen/es3-router&#39;</span>
+<span class="token keyword">import</span> routes <span class="token keyword">from</span> <span class="token string">&quot;./routes.ts&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> Router <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@extscreen/es3-router&#39;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> routerOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  main<span class="token operator">:</span> <span class="token string">&#39;index&#39;</span><span class="token punctuation">,</span>
+  error<span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
+  routes<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> router<span class="token operator">:</span> Router <span class="token operator">=</span> <span class="token function">createESRouter</span><span class="token punctuation">(</span>routerOptions<span class="token punctuation">)</span>
+<span class="token keyword">const</span> app<span class="token operator">:</span> ESApp <span class="token operator">=</span> <span class="token function">createESApp</span><span class="token punctuation">(</span>application<span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>install<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div>`,3)])))}});export{r as __pageData,u as default};
