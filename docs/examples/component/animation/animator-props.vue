@@ -29,10 +29,7 @@
 import { ref } from 'vue'
 import { defineComponent } from '@vue/runtime-core'
 import { useESRouter } from '@extscreen/es3-router'
-import {
-  QTAnimationPropertyName,
-  QTAnimationValueType,
-} from '@quicktvui/quicktvui3'
+import { QTAnimationType, QTAnimationValueType } from '@quicktvui/quicktvui3'
 import type { QTIAnimation } from '@quicktvui/quicktvui3'
 
 export default defineComponent({
@@ -44,8 +41,7 @@ export default defineComponent({
     const animator = {
       id: 'n', //默认可缺省
       valueType: QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT, //默认可缺省
-      propertyName:
-        QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+      type: QTAnimationType.TRANSLATION_X,
       values: [0, 300, 60, -60, 60, 0, 800, 60, -600, 60],
       duration: 10000,
       repeatMode: -1, //默认可缺省

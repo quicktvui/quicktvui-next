@@ -30,7 +30,7 @@ import { ref } from 'vue'
 import { defineComponent } from '@vue/runtime-core'
 import { useESRouter } from '@extscreen/es3-router'
 import {
-  QTAnimationPropertyName,
+  QTAnimationType,
   QTAnimationValueType,
   QTAnimator,
   QTAnimatorId,
@@ -53,8 +53,7 @@ export default defineComponent({
         {
           id: 'animator_1', //默认可缺省
           valueType: QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT, //默认可缺省
-          propertyName:
-            QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_TRANSLATION_X,
+          type: QTAnimationType.TRANSLATION_X,
           values: [0, 300, 60, -60, 60, 0, 800, 60, -600, 60],
           duration: 10000,
           repeatMode: -1, //默认可缺省
@@ -69,8 +68,7 @@ export default defineComponent({
         {
           id: 'animator_2', //默认可缺省
           valueType: QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT, //默认可缺省
-          propertyName:
-            QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_SCALE_X,
+          type: QTAnimationType.SCALE_X,
           values: [0, 2.5],
           duration: 2000,
           repeatMode: -1, //默认可缺省
@@ -85,8 +83,7 @@ export default defineComponent({
         {
           id: 'animator_3', //默认可缺省
           valueType: QTAnimationValueType.QT_ANIMATION_VALUE_TYPE_FLOAT, //默认可缺省
-          propertyName:
-            QTAnimationPropertyName.QT_ANIMATION_PROPERTY_NAME_ALPHA,
+          type: QTAnimationType.ALPHA,
           values: [0, 1],
           duration: 2000,
           repeatMode: -1, //默认可缺省
