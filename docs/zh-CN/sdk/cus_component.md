@@ -98,11 +98,9 @@ initConfig.setAppId("注册的APPID")
 
 ### 2. Vue注册方式
 
-----------------------------------------
+::: details vue3注册方式
 
-::: details 点击查看源码
-
-``` js
+```text
 //vue3注册方式
 
 /**
@@ -190,7 +188,7 @@ function registerMyVideoPlayerViewComponent(app: ESApp) {
 
 ::: details Vue2注册方式
 
-``` js
+```text
   //vu2注册方式
 function ESAndroidPlayerViewComponent() {
   Vue.registerElement('MyVideoComponent', {
@@ -238,7 +236,7 @@ function ESAndroidPlayerViewComponent() {
 />
 ```
 
-``` js
+```text
 function onPlayerStatusChanged(e) {
    const playerStatus = e.playerStatus;
    console.log(`接收到的播放状态:${  playerStatus}`);

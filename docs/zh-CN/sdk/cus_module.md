@@ -103,9 +103,40 @@ initConfig.setAppId("注册的APPID")
 
 ## Vue调用
 
-::: details 点击查看源码
+::: details Vue3
 
-``` js
+```text
+import { Native } from "@extscreen/es3-vue";
+// 参数1: module名称  参数2: 方法名称  参数3: 方法参数
+Native.callNative('MyModule', 'showToast', "hello");
+
+// 调用需要返回值的方法
+Native.callNativeWithPromise('MyModule', 'isAppInstall', 'com.extscreen.runtime')
+  .then((isInstall) => {
+    console.log('isAppInstall', isInstall)
+  });
+
+// vue层接收回调信息
+import { EventBus } from "@extscreen/es3-vue";
+
+//注册：
+EventBus.$on('onStatusChanged', this.onStatusChanged);
+
+//取消注册：
+EventBus.$off('onStatusChanged', this.onStatusChanged);
+
+//处理回调
+function onStatusChanged(e) {
+  const status = e.status;
+  console.log(`接收到的状态码:${status}`);
+}
+```
+
+:::
+
+::: details Vue2
+
+```text
 // 参数1: module名称  参数2: 方法名称  参数3: 方法参数
 Vue.Native.callNative('MyModule', 'showToast', "hello");
 
