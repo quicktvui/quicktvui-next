@@ -5,8 +5,7 @@ lang: zh-CN
 
 # 布局
 
-* [点击查看支持的布局](/zh-CN/css/overview)
-* [点击查看布局样式相关问题](/zh-CN/guide/faq/layout-style-faq)
+[点击查看 CSS 速查表](/zh-CN/css/cheat-sheet)
 
 ## 盒子模型
 

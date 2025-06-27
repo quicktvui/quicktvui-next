@@ -5,8 +5,12 @@ lang: zh-CN
 
 # 样式
 
-* [点击查看支持的样式](/zh-CN/css/overview)
-* [点击查看布局样式相关问题](/zh-CN/guide/faq/layout-style-faq)
+::: tip 提示
+
+[点击查看 CSS 速查表](/zh-CN/css/cheat-sheet)
+
+:::
+
 
 ## 样式主要依靠 css、sass、less 样式来实现。
 
