@@ -5,13 +5,7 @@ lang: zh-CN
 
 # 按键事件
 
-::: warning 注意
-
-仅在[`Page`](/zh-CN/guide/page/type)中使用生效
-
-:::
-
-## 基础用法
+## 一、在[页面](/zh-CN/guide/page/type)中使用
 
 在`setup`中编写 `onKeyDown` 和 `onKeyUp` 方法，并在`return`中返回此方法。
 
@@ -38,6 +32,22 @@ return {
 module/key/es-event
 
 :::
+
+
+## 二、在组件中使用
+
+在组件标签上监听事件`keydown`、`keyup`。
+
+```vue
+<div class="es-key-event-view-css" @keydown="onKeyDown" @keyup="onKeyUp"/>
+```
+
+:::demo
+
+module/key/component-event
+
+:::
+
 
 ## API
 

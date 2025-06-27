@@ -82,14 +82,6 @@
       "text": "Layout 布局",
       "children": [
         {
-          "link": "/layout/align-items",
-          "text": "alignItems"
-        },
-        {
-          "link": "/layout/align-self",
-          "text": "alignSelf"
-        },
-        {
           "link": "/layout/background",
           "text": "background"
         },
@@ -104,6 +96,14 @@
         {
           "link": "/layout/background-size",
           "text": "backgroundSize"
+        },
+        {
+          "link": "/layout/align-items",
+          "text": "alignItems"
+        },
+        {
+          "link": "/layout/align-self",
+          "text": "alignSelf"
         },
         {
           "link": "/layout/collapsable",
