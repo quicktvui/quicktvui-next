@@ -100,9 +100,9 @@ component/button/custom-icon-style
 | icon                            | 标准状态图标         | ^[string]                                                      | -       |
 | focusIcon                       | 焦点状态图标         | ^[string]                                                      | -       |
 | text                            | 按钮的文本           | ^[string]                                                      | -       |
-| gradientFocusBackground         | 焦点状态背景颜色      | ^[QTGradient]                                                  | -       |
-| gradientSelectedBackground      | 选中状态背景颜色      | ^[QTGradient]                                                  | -       |
-| gradientBackground              | 标准背景颜色         | ^[QTGradient]                                                  | -       |
+| gradientFocusBackground         | 焦点状态背景颜色      | [`QTGradient`](/zh-CN/css/color/gradient)                                                   | -       |
+| gradientSelectedBackground      | 选中状态背景颜色      | [`QTGradient`](/zh-CN/css/color/gradient)                                                   | -       |
+| gradientBackground              | 标准背景颜色         | [`QTGradient`](/zh-CN/css/color/gradient)                                                   | -       |
 | disabled                        | 是否显示可用样式      | ^[boolean]                                                     | false   |
 | round                           | 是否显示圆角样式      | ^[boolean]                                                     | false   | | -       |
 

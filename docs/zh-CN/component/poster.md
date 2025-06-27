@@ -96,7 +96,7 @@ component/poster/ripple
 | type                            | 类型                | ^[number]            | 10001   |
 | borderRadius                    | 圆角                | ^[number]            | 8       |
 | rippleColor                     | 水波纹颜色           | ^[string]            | -       |
-| focusBgColor                    | 焦点背景色           | ^[QTGradient]        | -       |
+| focusBgColor                    | 焦点背景色           | [`QTGradient`](/zh-CN/css/color/gradient)         | -       |
 | focusTitleColor                 | 标题焦点色           | ^[string]            | -       |
 | focusSubTitleColor              | 副标题焦点色         | ^[string]            | -       |
 | floatTitleBgColor               | 浮动标题背景色       | ^[object]`string[]`            | -       |

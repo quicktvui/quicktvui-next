@@ -11,9 +11,9 @@ lang: zh-CN
 
 | Name                    | Description       | Type                  | Default              |
 | ----------------------- | ----------------- | --------------------- | -------------------- |
-| gradientBackground      | 背景颜色            | ^[QTGradient]        | `{colors:['#1AFFFFFF','#1AFFFFFF'],orientation:6,cornerRadius:8}`|
-| gradientFocusBackground | 焦点状态背景颜色      | ^[QTGradient]        | `{colors:['#FFFFFF','#FFFFFF'],orientation:6,cornerRadius:8}`    |
-| iconGradientBackground  | 图标背景颜色         | ^[QTGradient]        | `{colors:['#FFB67827','#FFDBAF5C'],cornerRadius:4,orientation:6}`|
+| gradientBackground      | 背景颜色            | [`QTGradient`](/zh-CN/css/color/gradient)         | `{colors:['#1AFFFFFF','#1AFFFFFF'],orientation:6,cornerRadius:8}`|
+| gradientFocusBackground | 焦点状态背景颜色      | [`QTGradient`](/zh-CN/css/color/gradient)         | `{colors:['#FFFFFF','#FFFFFF'],orientation:6,cornerRadius:8}`    |
+| iconGradientBackground  | 图标背景颜色         | [`QTGradient`](/zh-CN/css/color/gradient)         | `{colors:['#FFB67827','#FFDBAF5C'],cornerRadius:4,orientation:6}`|
 | markColor               | 角标颜色            | ^[string]            | #FF4E46               |
 | markVipColor            | VIP角标颜色         | ^[string]            | #FFD97C               |
 | textColors              | 文字颜色            | ^[QTStateListColor]  | `{color:'rgba(255, 255, 255, .5)',focusColor:'rgba(0, 0, 0, 1)',selectColor:'rgba(255, 255, 255, .5)'}`|
