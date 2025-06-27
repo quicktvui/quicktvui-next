@@ -45,6 +45,10 @@
       {
         "link": "/function/overview",
         "text": "函数"
+      },
+      {
+        "link": "/transform/overview",
+        "text": "变换"
       }
     ]
   },
@@ -77,12 +81,8 @@
     "text": "Layout 布局",
     "children": [
       {
-        "link": "/layout/align-items",
-        "text": "alignItems"
-      },
-      {
-        "link": "/layout/align-self",
-        "text": "alignSelf"
+        "link": "/layout/background",
+        "text": "background"
       },
       {
         "link": "/layout/background-position-x",
@@ -95,6 +95,14 @@
       {
         "link": "/layout/background-size",
         "text": "backgroundSize"
+      },
+      {
+        "link": "/layout/align-items",
+        "text": "alignItems"
+      },
+      {
+        "link": "/layout/align-self",
+        "text": "alignSelf"
       },
       {
         "link": "/layout/collapsable",

@@ -46,6 +46,10 @@
         {
           "link": "/function/overview",
           "text": "函数"
+        },
+        {
+          "link": "/transform/overview",
+          "text": "变换"
         }
       ]
     },
@@ -84,6 +88,10 @@
         {
           "link": "/layout/align-self",
           "text": "alignSelf"
+        },
+        {
+          "link": "/layout/background",
+          "text": "background"
         },
         {
           "link": "/layout/background-position-x",
