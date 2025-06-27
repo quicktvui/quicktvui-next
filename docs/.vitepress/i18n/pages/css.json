@@ -1,5 +1,26 @@
 {
   "zh-CN": {
+    "overview": {
+      "text": "Overview 总览",
+      "children": [
+        {
+          "link": "/size/overview",
+          "text": "尺寸"
+        },
+        {
+          "link": "/pseudo-classes/overview",
+          "text": "伪类"
+        },
+        {
+          "link": "/selector/overview",
+          "text": "选择器"
+        },
+        {
+          "link": "/variable/overview",
+          "text": "变量"
+        }
+      ]
+    },
     "layout": {
       "text": "Layout 布局",
       "children": [
