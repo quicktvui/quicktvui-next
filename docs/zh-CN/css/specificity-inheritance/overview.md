@@ -13,9 +13,9 @@ lang: zh-CN
 | ID 选择器           | 使用 ID 选择器，优先级高                          | `#header {}`              | ✅       |
 | 类选择器、属性选择器、伪类 | 优先级次于 ID 选择器                           | `.btn {}`, `[type="text"] {}`, `:hover {}` | ✅       |
 | 元素选择器、伪元素  | 优先级最低                                       | `div {}`, `p::before {}`  | ✅       |
-| !important          | 覆盖所有优先级，即使内联样式                      | `color: red !important;`  | ❌       |
+| !important          | 覆盖所有优先级，即使内联样式                      | `color: red !important;`  | ✅       |
 | 继承               | 某些属性会从父元素自动继承                        | `color`, `font-family` 等 | ❌       |
 | 继承失败属性        | 大多数盒模型属性不继承，如 margin、padding        | `margin`, `padding`       | ❌       |
 | 样式来源顺序        | 后定义的样式会覆盖先定义的样式                      | 两个同级样式，后一个生效  | ✅       |
-| !important 冲突     | 当两个规则都使用 !important 时，优先级高的选择器生效 | `#id !important` > `.class !important` | ❌       |
+| !important 冲突     | 当两个规则都使用 !important 时，优先级高的选择器生效 | `#id !important` > `.class !important` | ✅       |
 

@@ -33,5 +33,5 @@ lang: zh-CN
 
 ***1、不支持的 CSS 样式如下：***
 
-* `!important`
+* `font-family`
 
