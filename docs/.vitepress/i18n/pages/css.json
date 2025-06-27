@@ -4,6 +4,19 @@
       "text": "Overview 总览",
       "children": [
         {
+          "link": "/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/installation",
+          "text": "集成"
+        }
+      ]
+    },
+    "cheatsheet": {
+      "text": "CheatSheet 速查表",
+      "children": [
+        {
           "link": "/size/overview",
           "text": "尺寸单位"
         },

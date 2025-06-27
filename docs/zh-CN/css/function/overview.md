@@ -25,6 +25,6 @@ lang: zh-CN
 | `attr()`         | 获取 HTML 属性值，用于 `content` 中                 | `content: attr(data-label)`             | ❌） |
 | `env()`          | 用于读取环境变量（如 `safe-area-inset-*`）         | `padding: env(safe-area-inset-bottom)`  | ❌       |
 | `repeat()`       | 在 `grid-template-columns` 等中重复模板             | `repeat(3, 1fr)`                         | ❌       |
-| `linear-gradient()` | 创建线性渐变                                   | `background: linear-gradient(red, blue)`| ❌       |
+| `linear-gradient()` | 创建线性渐变                                   | `background: linear-gradient(red, blue)`| ✅       |
 | `radial-gradient()` | 创建放射状渐变                                  | `background: radial-gradient(red, blue)`| ❌       |
 | `conic-gradient()`  | 创建圆锥渐变                                    | `background: conic-gradient(red, blue)` | ❌ |
