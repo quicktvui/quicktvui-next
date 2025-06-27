@@ -5,7 +5,7 @@
       "children": [
         {
           "link": "/size/overview",
-          "text": "尺寸"
+          "text": "尺寸单位"
         },
         {
           "link": "/pseudo-classes/overview",
@@ -18,6 +18,59 @@
         {
           "link": "/variable/overview",
           "text": "变量"
+        },
+        {
+          "link": "/auto/overview",
+          "text": "auto"
+        },
+        {
+          "link": "/layout-model/overview",
+          "text": "布局模型"
+        },
+        {
+          "link": "/media/overview",
+          "text": "媒体"
+        },
+        {
+          "link": "/specificity-inheritance/overview",
+          "text": "优先级和继承"
+        },
+        {
+          "link": "/animation-transition/overview",
+          "text": "动画与过渡"
+        },
+        {
+          "link": "/color/overview",
+          "text": "颜色"
+        },
+        {
+          "link": "/function/overview",
+          "text": "函数"
+        }
+      ]
+    },
+    "color": {
+      "text": "Color 颜色",
+      "children": [
+        {
+          "link": "/color/rgb",
+          "text": "RGB"
+        },
+        {
+          "link": "/color/hsl",
+          "text": "HSL"
+        },
+        {
+          "link": "/color/transparent",
+          "text": "透明"
+        },
+        {
+          "link": "/color/name",
+          "text": "颜色名称"
+        },
+        {
+          "link": "/color/gradient",
+          "text": "渐变颜色"
         }
       ]
     },
@@ -316,31 +369,6 @@
         {
           "link": "/style/visibility",
           "text": "visibility"
-        }
-      ]
-    },
-    "color": {
-      "text": "Color 颜色",
-      "children": [
-        {
-          "link": "/color/rgb",
-          "text": "RGB"
-        },
-        {
-          "link": "/color/hsl",
-          "text": "HSL"
-        },
-        {
-          "link": "/color/transparent",
-          "text": "透明"
-        },
-        {
-          "link": "/color/name",
-          "text": "颜色名称"
-        },
-        {
-          "link": "/color/gradient",
-          "text": "渐变颜色"
         }
       ]
     }
