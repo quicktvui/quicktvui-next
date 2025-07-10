@@ -18,17 +18,20 @@ lang: zh-CN
 在`main.ts`中集成
 
 ```ts
+
 //1.集成 ESPlayer
 import { createESPlayer } from "@extscreen/es3-player";
 
 //2.集成 ESVideoPlayer
 import { createESVideoPlayer } from '@extscreen/es3-video-player'
-
 //3.集成 ESSoundPoolPlayer
 import { createESSoundPoolPlayer } from '@extscreen/es3-soundpool-player'
-
 //4.集成 ESAudioPlayer
 import { createESAudioPlayer } from '@extscreen/es3-audio-player'
+
+//5.集成 QuickTVHtml
+import QuickTVHtml from '@quicktvui/html-core'
+import '@quicktvui/html-core/dist/index.css'
 
 const player = createESPlayer();
 app.use(player);
@@ -41,6 +44,9 @@ app.use(soundPlayer)
 
 const audioPlayer = createESAudioPlayer()
 app.use(audioPlayer)
+
+app.use(QuickTVHtml)
+
 ```
 
 ### 第三步、初始化
