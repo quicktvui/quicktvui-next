@@ -14,7 +14,5 @@ QuickTVUI组件分为两大类：
 
 ::: warning 注意：
 
-***1、组件必须设置宽（[width](/zh-CN/css/layout/width)）高（[height](/zh-CN/css/layout/height)）属性***
-
-***2、推荐使用针对电视定制开发的组件`qt-xx`***
+***推荐使用针对电视定制开发的组件`qt-xx`***
 :::

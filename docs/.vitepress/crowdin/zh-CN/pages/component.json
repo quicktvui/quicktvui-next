@@ -130,46 +130,6 @@
       {
         "link": "/indicator-list-view",
         "text": "IndicatorListView"
-      },
-      {
-        "link": "/header",
-        "text": "Header"
-      },
-      {
-        "link": "/footer",
-        "text": "Footer"
-      },
-      {
-        "link": "/aside",
-        "text": "Aside"
-      },
-      {
-        "link": "/main",
-        "text": "Main"
-      },
-      {
-        "link": "/container",
-        "text": "Container"
-      },
-      {
-        "link": "/input",
-        "text": "Input"
-      },
-      {
-        "link": "/switch",
-        "text": "Switch"
-      },
-      {
-        "link": "/rating-bar",
-        "text": "RatingBar"
-      },
-      {
-        "link": "/radio-group",
-        "text": "RadioGroup"
-      },
-      {
-        "link": "/checkbox-group",
-        "text": "CheckBoxGroup"
       }
     ]
   },
