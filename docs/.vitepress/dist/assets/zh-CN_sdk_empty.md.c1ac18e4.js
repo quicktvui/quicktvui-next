@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./app.0fdc4daf.js";const o='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"zh-CN/sdk/empty.md","lastUpdated":1746602666000}',a={},n=Object.assign(a,{__name:"empty",setup(s){return(r,_)=>(t(),e("div"))}});export{o as __pageData,n as default};
