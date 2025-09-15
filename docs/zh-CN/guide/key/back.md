@@ -13,6 +13,8 @@ lang: zh-CN
 
 ## 一、基础用法
 
+### 1、普通函数用法
+
 在`setup`中编写 `onBackPressed`方法，并在`return`中返回此方法。
 
 ```ts
@@ -29,6 +31,35 @@ return {
 :::demo
 
 module/key/es-back
+
+:::
+
+### 2、Hooks 函数用法
+::: warning 注意
+
+***@extscreen/es3-core" ≥ 1.2.6***
+
+***@extscreen/es3-router ≥ 1.2.3***
+
+***@extscreen/es3-vue ≥ 2.0.11***
+
+***@extscreen/es3-vue-style-parser ≥ 2.0.0***
+
+***@extscreen/es3-vue-css-loader ≥ 2.0.0***
+
+:::
+```ts
+import { onBackPressed } from "@extscreen/es3-vue";
+
+onBackPressed(() => {
+  //
+});
+
+```
+
+:::demo
+
+module/key/es-back-hooks
 
 :::
 

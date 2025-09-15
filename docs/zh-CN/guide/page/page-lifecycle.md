@@ -7,16 +7,8 @@ lang: zh-CN
 
 ::: warning 注意：
 
-1、声明在路由表 routes.ts 里面的组件才能作为快应用的 Page 。
+声明在路由表 routes.ts 里面的组件才能作为快应用的 Page 。
 
-2、生命周期方法前面不能添加`async`关键字。
-
-下面的方法使用错误
-```js
-async function onESCreate(){
-  //
-}
-```
 :::
 
 ::: tip 提示：Page 生命周期只能触发在 “ 声明在 routes.ts 路由表里面的 Page 组件 ”
@@ -28,8 +20,44 @@ async function onESCreate(){
 
 :::
 
-:::demo ## 基础用法
+## 一、普通函数用法
+
+::: warning 注意 生命周期方法前面不能添加 async 关键字。
+
+下面的方法使用错误
+
+```js
+async function onESCreate() {
+  //
+}
+```
+
+:::
+
+:::demo
 
 module/page/es-page-lifecycle
+
+:::
+
+## 二、Hooks 函数用法
+
+::: warning 注意
+
+***@extscreen/es3-core" ≥ 1.2.6***
+
+***@extscreen/es3-router ≥ 1.2.3***
+
+***@extscreen/es3-vue ≥ 2.0.11***
+
+***@extscreen/es3-vue-style-parser ≥ 2.0.0***
+
+***@extscreen/es3-vue-css-loader ≥ 2.0.0***
+
+:::
+
+:::demo
+
+module/page/es-page-lifecycle-hooks
 
 :::

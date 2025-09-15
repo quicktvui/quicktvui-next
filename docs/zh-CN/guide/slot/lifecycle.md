@@ -11,8 +11,34 @@
 ::: warning 注意：onESBind、onESRecycle、onESAttached、onESDetached 生命周期只会在瀑布流里面使用轻卡被调用。
 :::
 
-:::demo ## 生命周期示例
+## 生命周期示例
+
+### 1、普通函数用法
+
+:::demo
 
 guide/slot/lifecycle
+
+:::
+
+### 2、Hooks 函数用法
+
+::: warning 注意
+
+***@extscreen/es3-core" ≥ 1.2.6***
+
+***@extscreen/es3-router ≥ 1.2.3***
+
+***@extscreen/es3-vue ≥ 2.0.11***
+
+***@extscreen/es3-vue-style-parser ≥ 2.0.0***
+
+***@extscreen/es3-vue-css-loader ≥ 2.0.0***
+
+:::
+
+:::demo
+
+guide/slot/lifecycle-hooks
 
 :::

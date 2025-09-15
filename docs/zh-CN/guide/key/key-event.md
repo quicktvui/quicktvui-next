@@ -7,6 +7,8 @@ lang: zh-CN
 
 ## 一、在[页面](/zh-CN/guide/page/type)中使用
 
+### 1、普通函数用法
+
 在`setup`中编写 `onKeyDown` 和 `onKeyUp` 方法，并在`return`中返回此方法。
 
 ```ts
@@ -33,13 +35,50 @@ module/key/es-event
 
 :::
 
+### 2、Hooks 函数用法
+
+::: warning 注意
+
+***@extscreen/es3-core" ≥ 1.2.6***
+
+***@extscreen/es3-router ≥ 1.2.3***
+
+***@extscreen/es3-vue ≥ 2.0.11***
+
+***@extscreen/es3-vue-style-parser ≥ 2.0.0***
+
+***@extscreen/es3-vue-css-loader ≥ 2.0.0***
+
+:::
+
+```ts
+import { onKeyDown, onKeyUp } from "@extscreen/es3-vue";
+
+onKeyDown((keyEvent: ESKeyEvent) => {
+  //按键被按下
+  //处理业务逻辑
+})
+
+onKeyUp((keyEvent: ESKeyEvent) => {
+  //按键被抬起
+  //处理业务逻辑
+})
+
+```
+
+:::demo
+
+module/key/es-event-hooks
+
+:::
 
 ## 二、在组件中使用
 
 在组件标签上监听事件`keydown`、`keyup`。
 
 ```vue
-<div class="es-key-event-view-css" @keydown="onKeyDown" @keyup="onKeyUp"/>
+
+<div class='es-key-event-view-css' @keydown='onKeyDown' @keyup='onKeyUp' />
 ```
 
 :::demo
@@ -47,7 +86,6 @@ module/key/es-event
 module/key/component-event
 
 :::
-
 
 ## API
 
