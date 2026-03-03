@@ -7,8 +7,6 @@ import mkcert from 'vite-plugin-mkcert'
 import glob from 'fast-glob'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import {
   docPackage,
   epPackage,
@@ -41,6 +39,10 @@ if (process.env.DOC_ENV !== 'production') {
 
 export default defineConfig(async ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
+  const [{ default: Icons }, { default: IconsResolver }] = await Promise.all([
+    import('unplugin-icons/vite'),
+    import('unplugin-icons/resolver'),
+  ])
 
   const { dependencies: epDeps } = getPackageDependencies(epPackage)
   const { dependencies: docsDeps } = getPackageDependencies(docPackage)
@@ -121,7 +123,9 @@ export default defineConfig(async ({ mode }) => {
 
       // https://github.com/antfu/unplugin-icons
       Icons({
-        autoInstall: true,
+        // Avoid runtime package installation during config load;
+        // this bypasses CJS->ESM incompatibility in @antfu/install-pkg.
+        autoInstall: false,
       }),
       UnoCSS(),
       MarkdownTransform(),

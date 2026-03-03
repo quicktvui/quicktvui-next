@@ -1,18 +1,10 @@
-<script lang="ts" setup>
-import { computed } from 'vue'
-import { useLang } from '../../composables/lang'
-import homeLocale from '../../../i18n/pages/home.json'
-
-const lang = useLang()
-
-const homeLang = computed(() => homeLocale[lang.value])
-</script>
-
 <template>
   <div class="cards">
     <el-card shadow="hover">
-      <h3>开发便捷</h3>
-      <p>内置了大量针对智能电视开发的UI组件，简单易用;</p>
+      <h3>开发便捷（AI 辅助）</h3>
+      <p>
+        内置大量智能电视 UI 组件，并支持 AI 辅助生成页面、API 查询与样式纠错；
+      </p>
     </el-card>
     <el-card shadow="hover">
       <h3>快速更新</h3>
@@ -56,7 +48,8 @@ const homeLang = computed(() => homeLocale[lang.value])
   }
 
   .el-card {
-    height: 150px;
+    min-height: 170px;
+    height: auto;
     max-width: 250px;
     background: var(--bg-color);
     border: 1px solid #f6f6f7;
@@ -99,25 +92,6 @@ const homeLang = computed(() => homeLocale[lang.value])
       line-height: 20px;
       margin: 16px 0;
       text-align: left;
-    }
-
-    a {
-      line-height: 52px;
-      font-size: 14px;
-      color: var(--brand-color);
-      text-align: center;
-      border: 0;
-      padding: 0;
-      cursor: pointer;
-      background-color: var(--bg-color);
-      transition: all 0.3s;
-      text-decoration: none;
-      display: block;
-
-      &:hover {
-        // color: #fff;
-        // background: var(--brand-color);
-      }
     }
 
     // &:hover {

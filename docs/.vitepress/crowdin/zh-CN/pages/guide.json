@@ -16,6 +16,15 @@
       }
     ]
   },
+  "ai": {
+    "text": "AI 辅助开发",
+    "children": [
+      {
+        "text": "使用指南",
+        "link": "/guide/ai/ai-assistant"
+      }
+    ]
+  },
   "basic": {
     "text": "Basics 基础",
     "children": [
