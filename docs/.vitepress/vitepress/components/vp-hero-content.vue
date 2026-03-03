@@ -10,7 +10,7 @@
         href="https://beian.miit.gov.cn/"
         target="_blank"
         rel="noopener noreferer"
-        >京ICP备19043080号-7</a
+        >{{ text }}</a
       >
     </p>
     <!--    <p class="mt-1">-->
@@ -24,3 +24,17 @@
     <!--    </p>-->
   </div>
 </template>
+
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+
+const text = ref<string>('京ICP备19043080号-7')
+onMounted(() => {
+  // 此时 DOM 已经渲染完成，可以做真正的 DOM 操作
+  if (window.location.hostname == 'quicktv.net') {
+    text.value = '京ICP备2024066042号-2'
+  } else {
+    text.value = '京ICP备19043080号-7'
+  }
+})
+</script>

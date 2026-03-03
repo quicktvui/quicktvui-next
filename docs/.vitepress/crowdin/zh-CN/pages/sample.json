@@ -13,6 +13,10 @@
       {
         "link": "/app-list",
         "text": "快应用集合"
+      },
+      {
+        "link": "/ai-dev",
+        "text": "AI开发"
       }
     ]
   }

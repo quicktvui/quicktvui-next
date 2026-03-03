@@ -5,14 +5,7 @@ lang: zh-CN
 
 # 布局
 
-* [点击查看支持的布局](/zh-CN/css/overview)
-* [点击查看布局样式相关问题](/zh-CN/guide/faq/layout-style-faq)
-
-::: warning 注意：
-* ***布局中基础组件都需要明确指定组件的宽高尺寸***
-
-* ***仅使用 px 来设定单位。暂不支持百分比等其它的长度值，只支持具体数值。***
-:::
+[点击查看 CSS 速查表](/zh-CN/css/cheat-sheet)
 
 ## 盒子模型
 

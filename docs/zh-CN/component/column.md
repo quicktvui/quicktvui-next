@@ -5,6 +5,9 @@ lang: zh-CN
 
 # Column
 
+<img src="/component/column/column.png" />
+
+
 :::demo ## 基础用法
 
 component/column/basic

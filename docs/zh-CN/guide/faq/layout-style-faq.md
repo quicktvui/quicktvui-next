@@ -11,13 +11,13 @@ lang: zh-CN
 
 ## 二、仅支持部分 css 样式
 
-* [点击查看支持的css列表](/zh-CN/css/overview)
-* [点击查看不支持的css列表](/zh-CN/guide/layout/style#只支持部分CSS样式)
+[点击查看 CSS 速查表](/zh-CN/css/cheat-sheet)
 
 ## 三、背景色
 
+* [点击查看background](/zh-CN/css/layout/background)
+
 * 支持`background-color: red;`
-* 不支持`background: red;`
 * 建议非`qt`组件，例如：`div`、`span`标签，样式上添加`background-color: transparent;`
 
 ## 四、背景图

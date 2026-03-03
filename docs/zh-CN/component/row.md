@@ -5,6 +5,8 @@ lang: zh-CN
 
 # Row
 
+<img src="/component/row/row.png" />
+
 :::demo ## 基础用法
 
 component/row/basic

@@ -1,15 +1,102 @@
 {
   "zh-CN": {
+    "overview": {
+      "text": "Overview 总览",
+      "children": [
+        {
+          "link": "/introduction",
+          "text": "简介"
+        },
+        {
+          "link": "/installation",
+          "text": "集成"
+        }
+      ]
+    },
+    "cheatsheet": {
+      "text": "CheatSheet 速查表",
+      "children": [
+        {
+          "link": "/size/overview",
+          "text": "尺寸单位"
+        },
+        {
+          "link": "/pseudo-classes/overview",
+          "text": "伪类"
+        },
+        {
+          "link": "/selector/overview",
+          "text": "选择器"
+        },
+        {
+          "link": "/variable/overview",
+          "text": "变量"
+        },
+        {
+          "link": "/auto/overview",
+          "text": "auto"
+        },
+        {
+          "link": "/layout-model/overview",
+          "text": "布局模型"
+        },
+        {
+          "link": "/media/overview",
+          "text": "媒体"
+        },
+        {
+          "link": "/specificity-inheritance/overview",
+          "text": "优先级和继承"
+        },
+        {
+          "link": "/animation-transition/overview",
+          "text": "动画与过渡"
+        },
+        {
+          "link": "/color/overview",
+          "text": "颜色"
+        },
+        {
+          "link": "/function/overview",
+          "text": "函数"
+        },
+        {
+          "link": "/transform/overview",
+          "text": "变换"
+        }
+      ]
+    },
+    "color": {
+      "text": "Color 颜色",
+      "children": [
+        {
+          "link": "/color/rgb",
+          "text": "RGB"
+        },
+        {
+          "link": "/color/hsl",
+          "text": "HSL"
+        },
+        {
+          "link": "/color/transparent",
+          "text": "透明"
+        },
+        {
+          "link": "/color/name",
+          "text": "颜色名称"
+        },
+        {
+          "link": "/color/gradient",
+          "text": "渐变颜色"
+        }
+      ]
+    },
     "layout": {
       "text": "Layout 布局",
       "children": [
         {
-          "link": "/layout/align-items",
-          "text": "alignItems"
-        },
-        {
-          "link": "/layout/align-self",
-          "text": "alignSelf"
+          "link": "/layout/background",
+          "text": "background"
         },
         {
           "link": "/layout/background-position-x",
@@ -22,6 +109,14 @@
         {
           "link": "/layout/background-size",
           "text": "backgroundSize"
+        },
+        {
+          "link": "/layout/align-items",
+          "text": "alignItems"
+        },
+        {
+          "link": "/layout/align-self",
+          "text": "alignSelf"
         },
         {
           "link": "/layout/collapsable",
@@ -295,31 +390,6 @@
         {
           "link": "/style/visibility",
           "text": "visibility"
-        }
-      ]
-    },
-    "color": {
-      "text": "Color 颜色",
-      "children": [
-        {
-          "link": "/color/rgb",
-          "text": "RGB"
-        },
-        {
-          "link": "/color/hsl",
-          "text": "HSL"
-        },
-        {
-          "link": "/color/transparent",
-          "text": "透明"
-        },
-        {
-          "link": "/color/name",
-          "text": "颜色名称"
-        },
-        {
-          "link": "/color/gradient",
-          "text": "渐变颜色"
         }
       ]
     }

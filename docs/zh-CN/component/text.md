@@ -88,7 +88,7 @@ component/text/ellipsize-mode
 | autoHeight ^(virtual dom组件中使用)                    | 高度自适应                                               | ^[boolean]                                                                                           | false   |
 | focusable                      | 是否可以获得焦点      | ^[boolean]                                                                                           | false   |
 | duplicateParentState           | 继承父类的状态        | ^[boolean]                                                                                           | false   |
-| gradientBackground             | 渐变背景色           | ^[QTGradient]                                                                                        | false   |
+| gradientBackground             | 渐变背景色           | [`QTGradient`](/zh-CN/css/color/gradient) | false   |
 | showOnState                    | 在指定状态显示        | ^[enum]`'normal' \| 'selected' \| 'focused'`                                                         | normal  |
 | nextFocusDownSID ^(2.7)        | 向下时指定下一个焦点sid                                       | ^[string]                                                                                            | -       |
 | nextFocusUpSID ^(2.7)          | 向上时指定下一个焦点sid                                       | ^[string]                                                                                            | -       |
