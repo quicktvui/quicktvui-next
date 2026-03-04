@@ -8,49 +8,13 @@
 
 ### 第 2 步：把下面提示词复制给 AI
 
-将以下内容原样粘贴给 AI：
+将以下内容原样粘贴给 AI（可折叠 + 可复制）：
 
-````shell
-# Install QuickTVUI AI Runtime
+:::demo ## AI 初始化提示词
 
-请在用户终端中执行以下命令，并在每一步执行后确认结果：
+guide/ai/assistant-init-prompt.txt
 
-```bash
-npm install -g @quicktvui/ai-cli @quicktvui/ai-skills
-quicktvui-ai init
-quicktvui-ai doctor --strict
-```
-
-如果当前目录是 QuickTVUI 项目，再执行：
-
-```bash
-npm install @quicktvui/ai --save-dev
-```
-
-如果用户提供了项目路径，再执行一次严格检查：
-
-```bash
-quicktvui-ai doctor --strict --project <项目绝对路径>
-quicktvui-ai validate --project <项目绝对路径>
-```
-
-安装完成后，必须先读取并确认 QuickTVUI skill 规则，再执行任何创建/编码操作。
-
-按顺序检查并读取以下文件（读到一个即可）：
-
-1) ~/.agents/skills/quicktvui/SKILL.md
-2) ~/.codex/skills/quicktvui/SKILL.md
-3) %USERPROFILE%\\.agents\\skills\\quicktvui\\SKILL.md
-4) %USERPROFILE%\\.codex\\skills\\quicktvui\\SKILL.md
-
-读取后先输出“已读取的实际路径 + Project Creation Hard Rules 摘要”，然后再执行任务。
-创建项目时优先使用：
-```bash
-quicktvui-ai create-project <project-name>
-```
-
-完成后提醒用户重启或 reload AI Agent，让它重新扫描本地规则和 skills。
-````
+:::
 
 ### 第 3 步：开始提问（示例）
 

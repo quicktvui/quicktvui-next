@@ -13,6 +13,13 @@ import type Token from 'markdown-it/lib/token'
 import type Renderer from 'markdown-it/lib/renderer'
 
 const localMd = MarkdownIt().use(tag)
+const demoSourceLangMap: Record<string, string> = {
+  '.txt': 'text',
+  '.md': 'md',
+  '.sh': 'bash',
+  '.bash': 'bash',
+  '.zsh': 'bash',
+}
 
 interface ContainerOpts {
   marker?: string | undefined
@@ -42,18 +49,22 @@ export const mdPlugin = (md: MarkdownIt) => {
         const description = m && m.length > 1 ? m[1] : ''
         const sourceFileToken = tokens[idx + 2]
         let source = ''
-        const sourceFile = sourceFileToken.children?.[0].content ?? ''
+        const sourceFile = sourceFileToken.children?.[0].content?.trim() ?? ''
+        const sourceExt = path.extname(sourceFile)
+        const sourceLang =
+          demoSourceLangMap[sourceExt] ??
+          (sourceExt ? sourceExt.slice(1) : 'vue')
+        const sourcePath = sourceExt
+          ? path.resolve(docRoot, 'examples', sourceFile)
+          : path.resolve(docRoot, 'examples', `${sourceFile}.vue`)
 
         if (sourceFileToken.type === 'inline') {
-          source = fs.readFileSync(
-            path.resolve(docRoot, 'examples', `${sourceFile}.vue`),
-            'utf-8'
-          )
+          source = fs.readFileSync(sourcePath, 'utf-8')
         }
         if (!source) throw new Error(`Incorrect source file: ${sourceFile}`)
 
         return `<Demo :demos="demos" source="${encodeURIComponent(
-          highlight(source, 'vue')
+          highlight(source, sourceLang)
         )}" path="${sourceFile}" raw-source="${encodeURIComponent(
           source
         )}" description="${encodeURIComponent(localMd.render(description))}">`

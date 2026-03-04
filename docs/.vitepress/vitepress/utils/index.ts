@@ -67,9 +67,12 @@ export function createGitHubUrl(
   const base = isExternal(docsRepo)
     ? docsRepo
     : `https://github.com/${docsRepo}`
+  const hasExt = /\.[^/.]+$/.test(path)
+  const sourcePath = hasExt ? path : `${path}${ext || ''}`
+
   return `${base.replace(endingSlashRE, '')}/edit/${docsBranch}/${
     docsDir ? `${docsDir.replace(endingSlashRE, '')}/` : ''
-  }${folder || ''}${path}${ext || ''}`
+  }${folder || ''}${sourcePath}`
 }
 
 export function createCrowdinUrl(targetLang: string) {
