@@ -6,7 +6,7 @@
 
 ### 第一步：安装规范包
 
-在你的 QuickTVUI 项目（建议使用 `quicktvui-template` 创建）中安装：
+在你的 QuickTVUI 项目（建议使用 `quicktvui-template` 创建项目 [（点击查看创建项目）](/zh-CN/guide/basic/quick-start)）中安装：
 
 ```bash
 npm install @quicktvui/ai --save-dev
@@ -20,7 +20,7 @@ npm install @quicktvui/ai --save-dev
 - **Codex**
 - **Gemini**
 
-AI 助手将自动读取项目根目录下的 `.cursorrules`, `GEMINI.md`, `CLAUDE.md` 等文件中的指令。
+AI 助手将自动读取项目根目录下的 `.AGENTS.md`, `GEMINI.md`, `CLAUDE.md` 等文件中的指令。
 
 ## 2. 常见场景 AI 辅助示例
 
@@ -69,6 +69,7 @@ AI 助手将自动读取项目根目录下的 `.cursorrules`, `GEMINI.md`, `CLAU
 
 如果 AI 生成了错误的代码（例如使用了 Web 标签）：
 
-1. **重新引用规则**：告诉它：“请参考项目根目录下的 `.cursorrules` (或 `GEMINI.md`) 重新检查规范。”
+1. **重新引用规则**：告诉它：“请参考项目根目录下的 `AGENTS.md` (或 `GEMINI.md` 或 `CLAUDE.md`) 重新检查规范。”
 2. **强制读取文档**：告诉它：“请读取 `node_modules/@quicktvui/ai/rules/.docs/` 下的相关组件文档后再回答。”
+3. **强制读取源码**：告诉它：“请读取 `node_modules/@quicktvui/ai/rules/.source/` 下的相关源码后再回答。”
 
