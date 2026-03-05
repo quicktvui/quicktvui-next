@@ -23,6 +23,10 @@
         {
           "text": "使用指南",
           "link": "/guide/ai/ai-assistant"
+        },
+        {
+          "text": "提示词分类速览",
+          "link": "/guide/ai/ai-prompt"
         }
       ]
     },
