@@ -10,6 +10,21 @@
 - Android native logs
 - latest screenshot
 
+前置版本要求：
+
+- `ESDebugServer` 依赖 `@extscreen/es3-debug-server` 需要 `3.0.0` 或以上
+- 低于 `3.0.0` 可能缺少关键 `/ai/*` 能力，导致 `@quicktvui/ai-debug-mcp` 无法正常读取调试数据
+
+最低可用版本示例（`package.json`）：
+
+```json
+{
+  "dependencies": {
+    "@extscreen/es3-debug-server": "3.0.0"
+  }
+}
+```
+
 ## 一、它和 `@quicktvui/ai-mcp` 的区别
 
 QuickTVUI 现在有两类 MCP，不要混在一起：
@@ -84,7 +99,7 @@ Trae 会自动拉起它。
 
 ## 四、推荐方式：在 Trae 中使用
 
-### 第 1 步：先启动 `ESDebugServer`
+### 第 1 步：先启动 `ESDebugServer`（`@extscreen/es3-debug-server >= 3.0.0`）
 
 先确认本地 `ESDebugServer` 已经启动，并且 `/ai` 路由可用：
 
