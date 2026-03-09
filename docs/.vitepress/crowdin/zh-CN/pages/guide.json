@@ -20,12 +20,16 @@
     "text": "AI 开发",
     "children": [
       {
-        "text": "使用指南",
+        "text": "AI 助手入门",
         "link": "/guide/ai/ai-assistant"
       },
       {
-        "text": "MCP",
+        "text": "通用 MCP",
         "link": "/guide/ai/ai-mcp"
+      },
+      {
+        "text": "调试 MCP",
+        "link": "/guide/ai/ai-debug-mcp"
       }
     ]
   },

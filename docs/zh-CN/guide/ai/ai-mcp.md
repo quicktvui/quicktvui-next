@@ -2,6 +2,9 @@
 
 QuickTVUI 的 MCP 本地服务，提供文档检索、源码定位、doctor/validate 以及运行流程工具。
 
+> 这是通用 QuickTVUI MCP，主要负责 docs/source/doctor/run-dev/run-esapp。
+> 如果你要让 AI 读取运行中应用的 target、events、native logs、screenshot，请看 [调试 MCP](./ai-debug-mcp.md)。
+
 ## 能力概览
 
 - 通过 MCP tools 暴露 QuickTVUI 本地文档检索能力
