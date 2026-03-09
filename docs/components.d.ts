@@ -153,6 +153,7 @@ declare module '@vue/runtime-core' {
     VpEditLink: typeof import('./.vitepress/vitepress/components/doc-content/vp-edit-link.vue')['default']
     VpExample: typeof import('./.vitepress/vitepress/components/demo/vp-example.vue')['default']
     VpFooter: typeof import('./.vitepress/vitepress/components/globals/vp-footer.vue')['default']
+    VpForum: typeof import('./.vitepress/vitepress/components/navbar/vp-forum.vue')['default']
     VpHamburger: typeof import('./.vitepress/vitepress/components/navbar/vp-hamburger.vue')['default']
     VpHeroContent: typeof import('./.vitepress/vitepress/components/vp-hero-content.vue')['default']
     VpLastUpdatedAt: typeof import('./.vitepress/vitepress/components/doc-content/vp-last-updated-at.vue')['default']
