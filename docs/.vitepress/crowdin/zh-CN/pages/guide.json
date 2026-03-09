@@ -22,6 +22,10 @@
       {
         "text": "使用指南",
         "link": "/guide/ai/ai-assistant"
+      },
+      {
+        "text": "MCP",
+        "link": "/guide/ai/ai-mcp"
       }
     ]
   },
