@@ -7,6 +7,7 @@ import VPNavbarMenu from './navbar/vp-menu.vue'
 import VPNavbarThemeToggler from './navbar/vp-theme-toggler.vue'
 import VPNavbarTranslation from './navbar/vp-translation.vue'
 import VPNavbarRepository from './navbar/vp-repository.vue'
+import VPNavbarForum from './navbar/vp-forum.vue'
 import VPNavbarSocialLinks from './navbar/vp-social-links.vue'
 import VPNavbarHamburger from './navbar/vp-hamburger.vue'
 
@@ -46,6 +47,7 @@ const currentLink = computed(() => {
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />
         <VPNavbarMenu class="menu" />
         <VPNavbarRepository class="repository" />
+        <VPNavbarForum class="forum" />
         <VPNavbarThemeToggler class="theme-toggler" />
         <!--        <VPNavbarTranslation class="translation" />-->
         <VPNavbarSocialLinks class="social-links" />
