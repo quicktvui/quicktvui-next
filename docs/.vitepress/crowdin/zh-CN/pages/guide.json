@@ -24,12 +24,8 @@
         "link": "/guide/ai/ai-assistant"
       },
       {
-        "text": "通用 MCP",
+        "text": "MCP",
         "link": "/guide/ai/ai-mcp"
-      },
-      {
-        "text": "调试 MCP",
-        "link": "/guide/ai/ai-debug-mcp"
       }
     ]
   },

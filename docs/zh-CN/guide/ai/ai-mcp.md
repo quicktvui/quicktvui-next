@@ -1,9 +1,6 @@
 # @quicktvui/ai-mcp
 
-QuickTVUI 的 MCP 本地服务，提供文档检索、源码定位、doctor/validate 以及运行流程工具。
-
-> 这是通用 QuickTVUI MCP，主要负责 docs/source/doctor/run-dev/run-esapp。
-> 如果你要让 AI 读取运行中应用的 target、events、native logs、screenshot，请看 [调试 MCP](./ai-debug-mcp.md)。
+QuickTVUI 的 MCP 本地服务，提供文档检索、源码定位、doctor/validate、运行流程以及运行时调试能力。
 
 ## 能力概览
 
@@ -14,6 +11,7 @@ QuickTVUI 的 MCP 本地服务，提供文档检索、源码定位、doctor/vali
 - 提供设备与 runtime 状态检查能力
 - 支持日志采集与常见问题模式分析
 - 支持项目脚手架与 issue 报告模板准备
+- 提供运行时调试数据读取（target、events、native logs、screenshot、stream）
 - 提供适配 Trae 等客户端的 stdio 传输
 
 ## Tools
@@ -35,6 +33,17 @@ QuickTVUI 的 MCP 本地服务，提供文档检索、源码定位、doctor/vali
 - `quicktvui_project_scaffold`
 - `quicktvui_issue_report_prepare`
 
+### 调试工具
+
+- `list_targets`
+- `get_target_context`
+- `get_recent_events`
+- `get_recent_console_logs`
+- `get_recent_native_logs`
+- `get_latest_screenshot`
+- `get_live_events`
+- `get_stream_status`
+
 ## Resources
 
 - `quicktvui://server/info`
@@ -44,6 +53,16 @@ QuickTVUI 的 MCP 本地服务，提供文档检索、源码定位、doctor/vali
 - `quicktvui://trae/readme`
 - `quicktvui://docs/file/{path}`
 - `quicktvui://source/file/{path}`
+
+### 调试资源
+
+- `quicktvui-debug://targets`
+- `quicktvui-debug://stream/status`
+- `quicktvui-debug://targets/{clientId}/context`
+- `quicktvui-debug://targets/{clientId}/events/recent`
+- `quicktvui-debug://targets/{clientId}/events/live`
+- `quicktvui-debug://targets/{clientId}/native-logs/recent`
+- `quicktvui-debug://targets/{clientId}/screenshot/latest`
 
 ## Prompts
 
@@ -82,6 +101,22 @@ npx @quicktvui/ai-mcp
 quicktvui-ai-mcp
 ```
 
+## 调试参数（可选）
+
+如果你需要显式指定 ESDebugServer 地址或行为，可在同一个 `quicktvui-ai-mcp` 进程上直接传参：
+
+```bash
+quicktvui-ai-mcp --debug-base-url http://127.0.0.1:38989
+```
+
+支持参数：
+
+- `--debug-base-url`
+- `--debug-hash`
+- `--debug-stream` / `--no-debug-stream`
+- `--debug-stream-reconnect-delay-ms`
+- `--debug-max-live-events-per-client`
+
 ## Trae 配置
 
 可使用如下 stdio MCP 配置：
@@ -91,7 +126,9 @@ quicktvui-ai-mcp
   "mcpServers": {
     "quicktvui": {
       "command": "npx",
-      "args": ["@quicktvui/ai-mcp"],
+      "args": [
+        "@quicktvui/ai-mcp"
+      ],
       "cwd": "/ABS/PATH/TO/YOUR/QUICKTVUI/PROJECT"
     }
   }
@@ -112,13 +149,32 @@ quicktvui-ai-mcp
 }
 ```
 
+如果你需要同时启用运行时调试能力，可在同一个 `@quicktvui/ai-mcp` 配置里追加 debug 参数（不需要再配置第二个 MCP）：
+
+```json
+{
+  "mcpServers": {
+    "quicktvui": {
+      "command": "npx",
+      "args": [
+        "@quicktvui/ai-mcp",
+        "--debug-base-url",
+        "http://127.0.0.1:38989"
+      ],
+      "cwd": "/ABS/PATH/TO/YOUR/QUICKTVUI/PROJECT"
+    }
+  }
+}
+```
+
 `cwd` 必须指向目标 QuickTVUI 业务项目根目录，MCP 才能优先使用项目内 `@quicktvui/ai/rules` 进行文档和源码解析。
 
 ### `cwd` 是什么
 
 `cwd` 是 MCP 进程启动时的工作目录（Current Working Directory）。
 
-对 `@quicktvui/ai-mcp` 来说，它应该是你的 **QuickTVUI 业务项目根目录**（包含业务 `package.json` 的目录），而不是 `quicktvui-ai` 工具仓库目录。
+对 `@quicktvui/ai-mcp` 来说，它应该是你的 **QuickTVUI 业务项目根目录**（包含业务 `package.json` 的目录），而不是
+`quicktvui-ai` 工具仓库目录。
 
 macOS 示例：
 
@@ -127,7 +183,9 @@ macOS 示例：
   "mcpServers": {
     "quicktvui": {
       "command": "npx",
-      "args": ["@quicktvui/ai-mcp"],
+      "args": [
+        "@quicktvui/ai-mcp"
+      ],
       "cwd": "/Users/yourname/workspace/my-tv-app"
     }
   }
@@ -141,7 +199,9 @@ Windows 示例：
   "mcpServers": {
     "quicktvui": {
       "command": "npx",
-      "args": ["@quicktvui/ai-mcp"],
+      "args": [
+        "@quicktvui/ai-mcp"
+      ],
       "cwd": "C:\\workspace\\my-tv-app"
     }
   }
@@ -156,6 +216,8 @@ Windows 示例：
 2. 调用 `quicktvui_doctor` 做工具链路校验。
 3. 调用 `quicktvui_docs_search` 做文档检索校验。
 4. 调用 `quicktvui_validate_project` 做项目状态校验。
+5. 调用 `list_targets` 做调试链路校验。
+6. 调用 `get_stream_status` 检查 stream 状态。
 
 可直接复制到 Trae 的提示词：
 
@@ -201,6 +263,22 @@ runtimePackage=com.extscreen.runtime
 仅返回 structuredContent。
 ```
 
+调试 target 校验：
+
+```text
+只调用 list_targets，参数：
+baseUrl=http://127.0.0.1:38989
+仅返回 structuredContent。
+```
+
+stream 状态校验：
+
+```text
+只调用 get_stream_status，参数：
+baseUrl=http://127.0.0.1:38989
+仅返回 structuredContent。
+```
+
 预期结果：
 
 - `quicktvui_doctor` 能返回 `hasRulesRoot`、`hasDocs`、`hasSource` 等字段。
@@ -208,12 +286,15 @@ runtimePackage=com.extscreen.runtime
 - `quicktvui_validate_project` 应返回 `valid: true`（或明确的缺失项列表）。
 - `quicktvui_runtime_check` 在 runtime 准备完成时应返回 `installed: true`。
 - `quicktvui_devices_list` 在 adb 可用且有设备时应返回至少一个 `serial`。
+- `list_targets` 在 debug server 与目标连通时应返回至少一个 `clientId`。
+- `get_stream_status` 应返回 `stream.connected` 等状态字段。
 
 若校验失败，优先检查：
 
 - `cwd` 是否指向业务项目根目录。
 - 项目是否安装了 `@quicktvui/ai`。
 - MCP 配置中的 `command` / `args` 在本机是否可执行。
+- `ESDebugServer` 是否已启动并可访问（例如：`curl http://127.0.0.1:38989/ai/targets`）。
 
 ## 两种使用方式：自动调用 vs 强制调用
 
@@ -364,22 +445,22 @@ logText=粘贴日志
 按顺序执行，命中哪条先处理哪条：
 
 1. `quicktvui_doctor`/`quicktvui_validate_project` 失败
-先安装 `@quicktvui/ai`，并检查 `projectRoot`、`cwd` 是否指向业务项目根目录。
+   先安装 `@quicktvui/ai`，并检查 `projectRoot`、`cwd` 是否指向业务项目根目录。
 
 2. `quicktvui_devices_list` 无设备
-先处理 adb 连接；多设备时显式传 `device`。
+   先处理 adb 连接；多设备时显式传 `device`。
 
 3. `quicktvui_runtime_check.installed=false` 或 `launchCapability.ok=false`
-先执行 `quicktvui_runtime_install`，再复查 `quicktvui_runtime_check`。
+   先执行 `quicktvui_runtime_install`，再复查 `quicktvui_runtime_check`。
 
 4. `quicktvui_run_to_tv` 阶段失败
-根据 `stage` 字段定位在 `setup-vue-env`、`setup-android-env` 还是 `run-dev`。
+   根据 `stage` 字段定位在 `setup-vue-env`、`setup-android-env` 还是 `run-dev`。
 
 5. `run-dev` 仍失败
-执行 `quicktvui_logs_collect` + `quicktvui_logs_analyze`，按 `issues[].suggestion` 处理。
+   执行 `quicktvui_logs_collect` + `quicktvui_logs_analyze`，按 `issues[].suggestion` 处理。
 
 6. 多次修复仍失败
-执行 `quicktvui_issue_report_prepare` 生成脱敏报告再上报。
+   执行 `quicktvui_issue_report_prepare` 生成脱敏报告再上报。
 
 ## 说明
 
